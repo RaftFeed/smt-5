@@ -1,4 +1,4 @@
----
+﻿---
 title: "Week 6: Telecommunications, the Internet, and Wireless Technology"
 tags:
   - telecommunications
@@ -72,7 +72,7 @@ Dalam dekade terakhir, lanskap telekomunikasi korporat telah mengalami revolusi 
 ### 1.2 Komponen Dasar Jaringan Komputer
 Sebuah jaringan komputer sederhana terdiri dari komponen-komponen perangkat keras dan lunak berikut:
 
-![[mis16e-fig-7-1-components-simple-network.png]]
+![mis16e-fig-7-1-components-simple-network.png](../attachments/mis16e-fig-7-1-components-simple-network.png)
 *Gambar 6.1: Komponen-Komponen Dasar Jaringan Komputer Klien/Server*
 
 ```
@@ -127,7 +127,7 @@ Jaringan digital modern bersandar pada tiga pilar teknologi fundamental:
 
 ### 2.2 Pertukaran Paket (Packet Switching)
 
-![[mis16e-fig-7-3-packet-switching-data.png]]
+![mis16e-fig-7-3-packet-switching-data.png](../attachments/mis16e-fig-7-3-packet-switching-data.png)
 *Gambar 6.2: Mekanisme Packet Switching dan Transmisi Paket Mandiri*
 
 > [!info] Packet Switching vs Circuit Switching
@@ -147,7 +147,7 @@ Pesan Asli: [ D A T A - U S E R ]
 
 ### 2.3 Protokol TCP/IP dan Empat Lapisan Model Referensi
 
-![[mis16e-fig-7-4-tcp-ip-reference-model.png]]
+![mis16e-fig-7-4-tcp-ip-reference-model.png](../attachments/mis16e-fig-7-4-tcp-ip-reference-model.png)
 *Gambar 6.3: Empat Lapisan Model Referensi Protokol TCP/IP*
 
 Protokol adalah serangkaian aturan formal yang mengatur transmisi informasi antara dua titik dalam jaringan. **TCP/IP (*Transmission Control Protocol / Internet Protocol*)** adalah bahasa komunikasi universal yang diadopsi seluruh perangkat di dunia untuk berkomunikasi di internet.
@@ -184,7 +184,7 @@ Protokol adalah serangkaian aturan formal yang mengatur transmisi informasi anta
 - **Sinyal Digital:** Gelombang diskret berbentuk pulsa biner (dua status: 0 dan 1, ada tegangan atau tidak ada tegangan) yang diproses oleh komputer.
 - **Modem (*Modulator-Demodulator*):** Perangkat keras
 
-![[mis16e-fig-7-5-functions-of-modem.png]]
+![mis16e-fig-7-5-functions-of-modem.png](../attachments/mis16e-fig-7-5-functions-of-modem.png)
 *Gambar 6.4: Fungsi Modem Mengubah Sinyal Digital ke Analog dan Sebaliknya* yang mengubah sinyal digital komputer menjadi sinyal analog agar dapat merambat melalui saluran kabel telepon/kabel koaksial (*modulasi*), dan mengubah kembali sinyal analog menjadi sinyal digital di ujung penerima (*demodulasi*).
 
 ### 3.2 Tipe Jaringan Berdasarkan Jangkauan Geografis: LAN, CAN, MAN, dan WAN
@@ -220,7 +220,7 @@ Protokol adalah serangkaian aturan formal yang mengatur transmisi informasi anta
 
 ### 4.1 Struktur Hierarki Penyedia Layanan Internet (ISP Tier 1, 2, 3)
 
-![[mis16e-fig-7-7-internet-network-architecture.png]]
+![mis16e-fig-7-7-internet-network-architecture.png](../attachments/mis16e-fig-7-7-internet-network-architecture.png)
 *Gambar 6.5: Arsitektur Jaringan Internet Global dan Tulang Punggung ISP*
 
 Internet global tidak dimiliki oleh satu entitas tunggal, melainkan dioperasikan melalui hierarki komersial penyedia jasa internet (*Internet Service Providers - ISPs*):
@@ -241,7 +241,7 @@ Setiap perangkat yang terhubung ke internet wajib memiliki alamat unik yang dise
 ### 4.3 Hierarki Domain Name System (DNS)
 Karena manusia sulit mengingat rangkaian angka IP address numerik, internet menggunakan **Domain Name System (DNS)**
 
-![[mis16e-fig-7-6-domain-name-system-dns.png]]
+![mis16e-fig-7-6-domain-name-system-dns.png](../attachments/mis16e-fig-7-6-domain-name-system-dns.png)
 *Gambar 6.6: Struktur Hierarki Domain Name System (Root, TLD, Second-Level, Host)* untuk menerjemahkan nama domain ramah manusia menjadi alamat IP numerik mesin:
 
 ```
@@ -273,13 +273,13 @@ Karena manusia sulit mengingat rangkaian angka IP address numerik, internet meng
 2. **Voice over IP (VoIP):**
    - Teknologi yang mentransmisikan informasi suara manusia
 
-![[mis16e-fig-7-8-how-voip-works.png]]
+![mis16e-fig-7-8-how-voip-works.png](../attachments/mis16e-fig-7-8-how-voip-works.png)
 *Gambar 6.7: Arsitektur Pemrosesan Panggilan Suara Voice over IP (VoIP)* dalam bentuk paket data digital melalui internet (*packet-switched network*) alih-alih menggunakan saluran sirkuit telepon konvensional (PSTN).
    - Menghilangkan biaya pulsa sambungan langsung jarak jauh (SLI) dan memungkinkan fleksibilitas komunikasi korporat (contoh: panggilan Skype, WhatsApp Voice, Zoom).
 3. **Virtual Private Network (VPN):**
    - Jaringan privat aman dan terenkripsi
 
-![[mis16e-fig-7-9-virtual-private-network-vpn.png]]
+![mis16e-fig-7-9-virtual-private-network-vpn.png](../attachments/mis16e-fig-7-9-virtual-private-network-vpn.png)
 *Gambar 6.8: Mekanisme Tunneling pada Virtual Private Network (VPN)* yang dibangun di atas infrastruktur publik internet.
    - Menggunakan mekanisme **Tunneling (Penerowongan):** Paket data privat dibungkus (*enkapsulasi*) di dalam paket IP publik dan dienkripsi sehingga tidak dapat dibaca oleh penyadap jaringan di internet publik.
 
@@ -320,10 +320,10 @@ Karena manusia sulit mengingat rangkaian angka IP address numerik, internet meng
 
 ### 5.2 Jaringan Komputer Nirkabel: Bluetooth, Wi-Fi, dan WiMAX
 
-![[mis16e-fig-7-12-bluetooth-pan-network.png]]
+![mis16e-fig-7-12-bluetooth-pan-network.png](../attachments/mis16e-fig-7-12-bluetooth-pan-network.png)
 *Gambar 6.9: Jaringan Nirkabel Bluetooth Personal Area Network (PAN)*
 
-![[mis16e-fig-7-13-wifi-wireless-lan-80211.png]]
+![mis16e-fig-7-13-wifi-wireless-lan-80211.png](../attachments/mis16e-fig-7-13-wifi-wireless-lan-80211.png)
 *Gambar 6.10: Arsitektur Jaringan Wi-Fi 802.11 Wireless Local Area Network (WLAN)*
 
 ```
@@ -345,7 +345,7 @@ Karena manusia sulit mengingat rangkaian angka IP address numerik, internet meng
 
 ### 5.3 Radio Frequency Identification (RFID) dan Pelacakan Rantai Pasok
 
-![[mis16e-fig-7-14-how-rfid-works.png]]
+![mis16e-fig-7-14-how-rfid-works.png](../attachments/mis16e-fig-7-14-how-rfid-works.png)
 *Gambar 6.11: Mekanisme Kerja RFID Tag dan Reader dalam Rantai Pasokan*
 
 > [!info] Definisi RFID
@@ -362,7 +362,7 @@ Karena manusia sulit mengingat rangkaian angka IP address numerik, internet meng
 
 ### 5.4 Jaringan Sensor Nirkabel (Wireless Sensor Networks - WSN)
 
-![[mis16e-fig-7-16-wireless-sensor-network-wsn.png]]
+![mis16e-fig-7-16-wireless-sensor-network-wsn.png](../attachments/mis16e-fig-7-16-wireless-sensor-network-wsn.png)
 *Gambar 6.12: Arsitektur Jaringan Sensor Nirkabel (WSN) Topologi Mesh*
 
 - **Definisi:** Jaringan yang terdiri dari ratusan hingga ribuan perangkat sensor nirkabel kecil mandiri yang disebut **Nodes (*Motes*)** yang disebar di lingkungan fisik.

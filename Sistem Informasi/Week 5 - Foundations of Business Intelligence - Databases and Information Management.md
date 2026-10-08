@@ -1,4 +1,4 @@
----
+﻿---
 title: "Week 5: Foundations of Business Intelligence - Databases and Information Management"
 tags:
   - databases
@@ -71,7 +71,7 @@ type: study-note
 ### 1.1 Hirarki Data Komputer: Bit hingga Database
 Sistem komputer mengorganisasikan data ke dalam hierarki piramida yang bertingkat dari unit sirkuit terkecil hingga repositori enterprise:
 
-![[mis16e-fig-6-1-data-hierarchy.jpg]]
+![mis16e-fig-6-1-data-hierarchy.jpg](../attachments/mis16e-fig-6-1-data-hierarchy.jpg)
 *Gambar 5.1: Hirarki Data Komputer: Dari Bit, Byte, Field, Record, File, hingga Database*
 
 ```
@@ -105,7 +105,7 @@ Sistem komputer mengorganisasikan data ke dalam hierarki piramida yang bertingka
 
 ### 1.2 Keterbatasan dan Masalah Pemrosesan File Tradisional
 
-![[mis16e-fig-6-2-traditional-file-processing.jpg]]
+![mis16e-fig-6-2-traditional-file-processing.jpg](../attachments/mis16e-fig-6-2-traditional-file-processing.jpg)
 *Gambar 5.2: Masalah Lingkungan Pemrosesan File Tradisional (Duplikasi Data & Ketergantungan)*
 
 Sebelum adanya DBMS modern, setiap departemen membangun program aplikasinya sendiri yang memiliki file data mandiri (*file-oriented processing*). Pendekatan kuno ini memicu persoalan kritis:
@@ -129,7 +129,7 @@ Sebelum adanya DBMS modern, setiap departemen membangun program aplikasinya send
 > [!info] Definisi DBMS
 > **Database Management System (DBMS)** adalah perangkat lunak khusus yang mengontrol pembuatan, pemeliharaan, keamanan, dan penggunaan basis data bersama. DBMS bertindak sebagai perantara cerdas antara program aplikasi pengguna dan file data fisik di media penyimpanan.
 
-![[mis16e-fig-6-3-hr-database-multiple-views.jpg]]
+![mis16e-fig-6-3-hr-database-multiple-views.jpg](../attachments/mis16e-fig-6-3-hr-database-multiple-views.jpg)
 *Gambar 5.3: Basis Data SDM dengan Pemisahan Logical Views dan Tampilan Fisik Tunggal*
 
 - **Pemisahan Tampilan Logis vs Tampilan Fisik:**
@@ -158,7 +158,7 @@ Sebelum adanya DBMS modern, setiap departemen membangun program aplikasinya send
 ### 2.2 Relational DBMS (RDBMS): Tabel, Tupel, dan Kunci
 Tipe DBMS paling dominan dalam bisnis modern adalah **Relational DBMS (RDBMS)**:
 
-![[mis16e-fig-6-4-relational-database-tables.jpg]]
+![mis16e-fig-6-4-relational-database-tables.jpg](../attachments/mis16e-fig-6-4-relational-database-tables.jpg)
 *Gambar 5.4: Struktur Tabel Database Relasional (Baris/Tupel, Kolom/Atribut, Primary & Foreign Key)*
 - Mengorganisasikan data ke dalam tabel dua dimensi yang disebut **Relasi (*Relations*)**.
 - **Baris (*Rows / Tuples*):** Mewakili record data aktual tentang entitas individu.
@@ -169,7 +169,7 @@ Tipe DBMS paling dominan dalam bisnis modern adalah **Relational DBMS (RDBMS)**:
 ### 2.3 Tiga Operasi Dasar RDBMS: SELECT, PROJECT, dan JOIN
 RDBMS memanipulasi data melalui tiga operasi aljabar relasional fundamental:
 
-![[mis16e-fig-6-5-three-operations-relational-dbms.jpg]]
+![mis16e-fig-6-5-three-operations-relational-dbms.jpg](../attachments/mis16e-fig-6-5-three-operations-relational-dbms.jpg)
 *Gambar 5.5: Tiga Operasi Aljabar Relasional: SELECT, PROJECT, dan JOIN*
 
 ```
@@ -190,7 +190,7 @@ Tabel SUMBER_A (Supplier)                    Tabel SUMBER_B (Part)
 - **Data Definition Language (DDL):** Perintah formal untuk menetapkan struktur konten database, membuat tabel baru, dan mendefinisikan tipe data field (contoh: `CREATE TABLE`, `ALTER TABLE`).
 - **Data Dictionary (Kamus Data):** Berkas repositori terotomasi
 
-![[mis16e-fig-6-6-access-data-dictionary.jpg]]
+![mis16e-fig-6-6-access-data-dictionary.jpg](../attachments/mis16e-fig-6-6-access-data-dictionary.jpg)
 *Gambar 5.6: Fitur Kamus Data (Data Dictionary) untuk Mengelola Metadata Atribut* yang menyimpan informasi metadata mengenai elemen data (definisi field, tipe numerik/teks, batas panjang karakter, hak akses pengguna).
 - **Data Manipulation Language (DML):** Bahasa khusus untuk memanipulasi data di dalam database (menambah, mengubah, mengambil data).
   - Standar industri paling universal adalah **SQL (*Structured Query Language*)**:
@@ -216,10 +216,10 @@ Untuk merancang basis data yang tangguh, tim analis harus melalui perancangan **
 2. **Insertion Anomaly:** Tidak bisa memasukkan informasi vendor baru ke database sebelum vendor tersebut memasok pesanan barang tertentu.
 3. **Deletion Anomaly:** Menghapus pesanan barang tertentu secara tidak sengaja menghapus seluruh rekam jejak identitas pelanggan dari sistem.
 
-![[mis16e-fig-6-9-unnormalized-relation-order.jpg]]
+![mis16e-fig-6-9-unnormalized-relation-order.jpg](../attachments/mis16e-fig-6-9-unnormalized-relation-order.jpg)
 *Gambar 5.7: Tabel Relasi Pesanan Sebelum Dinormalisasi (Mengandung Grup Berulang)*
 
-![[mis16e-fig-6-10-normalized-tables-order.jpg]]
+![mis16e-fig-6-10-normalized-tables-order.jpg](../attachments/mis16e-fig-6-10-normalized-tables-order.jpg)
 *Gambar 5.8: Tabel Hasil Normalisasi Relasional yang Efisien dan Bebas Anomali*
 
 #### Tahapan Bentuk Normal:
@@ -230,7 +230,7 @@ Untuk merancang basis data yang tangguh, tim analis harus melalui perancangan **
 ### 3.2 Diagram Hubungan Entitas (Entity-Relationship Diagram - ERD)
 Diagram skematis yang menggambarkan hubungan logis antarentitas dalam sistem basis data:
 
-![[mis16e-fig-6-11-entity-relationship-diagram.jpg]]
+![mis16e-fig-6-11-entity-relationship-diagram.jpg](../attachments/mis16e-fig-6-11-entity-relationship-diagram.jpg)
 *Gambar 5.9: Entity-Relationship Diagram (ERD) untuk Sistem Manajemen Pesanan*
 
 ```
@@ -284,7 +284,7 @@ Meskipun RDBMS sangat baik untuk data terstruktur transaksi keuangan (*ACID comp
 
 ### 4.3 Blockchain: Buku Besar Terdistribusi dan Kekal
 
-![[mis16e-fig-6-12-how-blockchain-works.jpg]]
+![mis16e-fig-6-12-how-blockchain-works.jpg](../attachments/mis16e-fig-6-12-how-blockchain-works.jpg)
 *Gambar 5.10: Mekanisme Rantai Blok Kriptografi dalam Blockchain*
 
 > [!info] Definisi Blockchain
@@ -307,7 +307,7 @@ Meskipun RDBMS sangat baik untuk data terstruktur transaksi keuangan (*ACID comp
 
 ## 5. Tantangan Big Data dan Infrastruktur Business Intelligence
 
-![[mis16e-fig-6-13-contemporary-bi-infrastructure.jpg]]
+![mis16e-fig-6-13-contemporary-bi-infrastructure.jpg](../attachments/mis16e-fig-6-13-contemporary-bi-infrastructure.jpg)
 *Gambar 5.11: Infrastruktur Business Intelligence (BI) Kontemporer (Hadoop, Warehouse, Analytic)*
 
 ### 5.1 Karakteristik Big Data: Volume, Velocity, dan Variety (3V)
@@ -368,7 +368,7 @@ Setelah basis data terintegrasi dalam infrastruktur BI, para analis bisnis mengg
 
 ### 6.1 Online Analytical Processing (OLAP) dan Kubus Data
 
-![[mis16e-fig-6-14-multidimensional-data-model-cube.jpg]]
+![mis16e-fig-6-14-multidimensional-data-model-cube.jpg](../attachments/mis16e-fig-6-14-multidimensional-data-model-cube.jpg)
 *Gambar 5.12: Model Data Multidimensi OLAP Cube (Irisan Produk, Wilayah, Waktu)*
 
 > [!info] Definisi OLAP
@@ -420,7 +420,7 @@ Setelah basis data terintegrasi dalam infrastruktur BI, para analis bisnis mengg
 ### 6.4 Arsitektur Integrasi Database dengan Web
 Bagaimana pengguna internet mengakses data transaksi perusahaan dari smartphone atau peramban web:
 
-![[mis16e-fig-6-15-linking-databases-to-web.jpg]]
+![mis16e-fig-6-15-linking-databases-to-web.jpg](../attachments/mis16e-fig-6-15-linking-databases-to-web.jpg)
 *Gambar 5.13: Arsitektur Menghubungkan Basis Data Korporat ke Jaringan Web Publik*
 
 ```

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Week 3: Isu Etika, Privasi, dan Sosial dalam Sistem Informasi"
 tags:
   - ethics
@@ -67,7 +67,7 @@ type: study-note
 ### 1.1 Analogi Riak di Atas Kolam (Ripples in the Pond Model)
 Pengenalan teknologi informasi baru diibaratkan seperti melempar batu ke tengah kolam yang tenang:
 
-![[mis16e-fig-4-1-ethical-social-political-model.jpg]]
+![mis16e-fig-4-1-ethical-social-political-model.jpg](../attachments/mis16e-fig-4-1-ethical-social-political-model.jpg)
 *Gambar 3.1: Model Hubungan Dinamika Isu Etika, Sosial, dan Politik dalam Masyarakat Informasi*
 
 ```
@@ -103,7 +103,7 @@ Pengenalan teknologi informasi baru diibaratkan seperti melempar batu ke tengah 
 ### 1.2 Lima Dimensi Moral dalam Era Informasi
 Isu etika, sosial, dan politik dalam masyarakat informasi diorganisasikan ke dalam lima dimensi moral:
 
-![[si-bab3-p07-5-dimensi-moral.png]]
+![si-bab3-p07-5-dimensi-moral.png](../attachments/si-bab3-p07-5-dimensi-moral.png)
 *Gambar 3.2: 5 Dimensi Moral dalam Masyarakat Informasi (Slide Dosen KOM1333A)*
 1. **Hak dan Kewajiban Informasi (*Information Rights and Obligations*):** Hak apa yang dimiliki individu atas data pribadi mereka? Kewajiban apa yang diemban oleh organisasi pengumpul data untuk melindunginya?
 2. **Hak dan Kewajiban Kepemilikan (*Property Rights and Obligations*):** Bagaimana hak kekayaan intelektual (HAKI) dilindungi ketika informasi digital dapat disalin dan disebarkan secara instan tanpa biaya tambahan?
@@ -130,7 +130,7 @@ Perkembangan teknologi memicu dilema etika karena mengubah kapasitas manusia dal
 - **NORA (*Nonobvious Relationship Awareness*):**
   - Teknologi analitik intelijen canggih
 
-![[mis16e-fig-4-2-nora-diagram.jpg]]
+![mis16e-fig-4-2-nora-diagram.jpg](../attachments/mis16e-fig-4-2-nora-diagram.jpg)
 *Gambar 3.3: Diagram Arsitektur Nonobvious Relationship Awareness (NORA)* yang mampu menambang data dari sumber publik dan rahasia (catatan kriminal, panggilan telepon, catatan perhotelan, transaksi keuangan) guna menemukan koneksi tersembunyi antarmanusia.
   - *Contoh Penggunaan:* Mendeteksi agen teroris, pencucian uang, atau pelamar kerja di kasino yang memiliki hubungan tersembunyi dengan sindikat kriminal perjudian.
 
@@ -206,7 +206,7 @@ Prinsip **FTC Fair Information Practices (FIP)** yang menjadi acuan regulasi int
 
 ### 4.3 Vektor Pelanggaran Privasi di Internet: Cookies, Web Beacons, dan Spyware
 
-![[mis16e-fig-4-3-cookies-identify-web-visitors.jpg]]
+![mis16e-fig-4-3-cookies-identify-web-visitors.jpg](../attachments/mis16e-fig-4-3-cookies-identify-web-visitors.jpg)
 *Gambar 3.4: Mekanisme Bagaimana Cookies Mengidentifikasi dan Melacak Pengunjung Web*
 
 - **Cookies:** File teks kecil yang disematkan server situs ke hard disk komputer pengguna untuk mengingat preferensi kunjungan.
@@ -221,7 +221,7 @@ Prinsip **FTC Fair Information Practices (FIP)** yang menjadi acuan regulasi int
 ### 5.1 Studi Kasus 1: Mengapa Google Gratis? (Model Bisnis Berbasis Data)
 Berdasarkan materi pembahasan slide dosen:
 
-![[si-bab3-p08-kasus-google-gratis.png]]
+![si-bab3-p08-kasus-google-gratis.png](../attachments/si-bab3-p08-kasus-google-gratis.png)
 *Gambar 3.5: Diskusi Kasus Mengapa Google Gratis (Slide Dosen KOM1333A)*
 - **Paradoks Layanan Cuma-Cuma:** Mengapa mesin pencari Google, YouTube, Gmail, dan Maps dapat dinikmati pengguna secara gratis?
 - **Fakta Finansial:** Lebih dari 80% pendapatan Alphabet Inc. bersumber dari **Advertising Revenue (Google Ads & AdSense)**.
@@ -232,10 +232,10 @@ Berdasarkan materi pembahasan slide dosen:
 
 ### 5.2 Studi Kasus 2: Pelacakan Lokasi Seluler dan Aplikasi MuslimPro
 
-![[si-bab3-p05-kasus-location-tracking.png]]
+![si-bab3-p05-kasus-location-tracking.png](../attachments/si-bab3-p05-kasus-location-tracking.png)
 *Gambar 3.6: Kasus Mobile Location Tracking Systems (Slide Dosen KOM1333A)*
 
-![[si-bab3-p06-kasus-muslimpro.png]]
+![si-bab3-p06-kasus-muslimpro.png](../attachments/si-bab3-p06-kasus-muslimpro.png)
 *Gambar 3.7: Kasus Penjualan Data Lokasi Pengguna Aplikasi MuslimPro*
 
 - **Latar Belakang Kasus:** Pada tahun 2020 terungkap investigasi jurnalisme bahwa data lokasi presisi dari jutaan pengguna aplikasi pengingat salat **MuslimPro** telah dibeli oleh pialang data (*data broker: X-Mode / Babel Street*) dan diteruskan ke pihak militer Amerika Serikat (*US Special Operations Command*).
@@ -244,10 +244,10 @@ Berdasarkan materi pembahasan slide dosen:
 ### 5.3 Studi Kasus 3: Kebocoran Data Skala Masif di Indonesia (Bjorka BPJS & Dukcapil)
 Berdasarkan arsip slide dosen:
 
-![[si-bab3-p03-kasus-bjorka-bpjs.png]]
+![si-bab3-p03-kasus-bjorka-bpjs.png](../attachments/si-bab3-p03-kasus-bjorka-bpjs.png)
 *Gambar 3.8: Kasus Kebocoran Data BPJS yang Diunggah Peretas Bjorka (Slide Dosen KOM1333A)*
 
-![[si-bab3-p04-kasus-dukcapil-hoaks.png]]
+![si-bab3-p04-kasus-dukcapil-hoaks.png](../attachments/si-bab3-p04-kasus-dukcapil-hoaks.png)
 *Gambar 3.9: Kasus Kebocoran 300 Juta Data Kependudukan Dukcapil & Situs Hoaks*
 
 1. **Kasus Peretasan Data BPJS Kesehatan oleh Bjorka:**

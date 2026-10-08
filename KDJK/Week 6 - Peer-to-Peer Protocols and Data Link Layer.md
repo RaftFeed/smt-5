@@ -1,4 +1,4 @@
----
+﻿---
 title: "LGW2E Chapter 5: Peer-to-Peer Protocols and Data Link Layer"
 tags:
   - computer-networks
@@ -96,7 +96,7 @@ type: study-note
 ### 1.1 Konsep Komunikasi Peer-to-Peer
 Protokol peer-to-peer mengatur pertukaran data antara dua entitas logis yang berada pada lapisan (*layer*) yang sama di dua mesin/perangkat yang berbeda.
 
-![[lgw2e-p2p-sdu-pdu.png]]
+![lgw2e-p2p-sdu-pdu.png](../attachments/lgw2e-p2p-sdu-pdu.png)
 
 - **Service Data Unit (SDU):** Unit data informasi yang diserahkan oleh lapisan atas ($n+1$) kepada lapisan bawah ($n$) untuk ditransmisikan.
 - **Protocol Data Unit (PDU):** Unit data terformat yang dipertukarkan antar-peer lapisan $n$ melalui kanal fisik/jaringan. PDU dibentuk dari SDU yang dibungkus dengan *Protocol Control Information* (PCI) berupa header dan trailer.
@@ -140,10 +140,10 @@ Layanan yang disediakan layer-$n$ kepada layer-$(n+1)$ terbagi menjadi dua parad
 
 ### 1.4 End-to-End vs Hop-by-Hop: Trade-off Desain
 
-![[lgw2e-hop-by-hop-error-control.png]]
+![lgw2e-hop-by-hop-error-control.png](../attachments/lgw2e-hop-by-hop-error-control.png)
 *Gambar: Error control dilakukan di setiap link lompatan (Hop-by-Hop).*
 
-![[lgw2e-end-to-end-error-control.png]]
+![lgw2e-end-to-end-error-control.png](../attachments/lgw2e-end-to-end-error-control.png)
 *Gambar: Error control dilakukan secara End-to-End di lapisan transport.*
 
 ```
@@ -177,7 +177,7 @@ END-TO-END APPROACH (Transport Layer):
 
 ### 2.2 Urgensi Sequence Number
 
-![[lgw2e-stop-and-wait-states.png]]
+![lgw2e-stop-and-wait-states.png](../attachments/lgw2e-stop-and-wait-states.png)
 
 Tanpa nomor urut (*sequence number*), protokol akan mengalami kegagalan logika (*fatal failure*):
 - **Kasus 1 (Frame Hilang/Rusak):** Pengirim mengirim frame 0 $\to$ frame hilang $\to$ timeout $\to$ retransmisi frame 0 $\to$ penerima menerima. (Ini bekerja baik).
@@ -192,10 +192,10 @@ Tanpa nomor urut (*sequence number*), protokol akan mengalami kegagalan logika (
 
 ### 2.3 Stop-and-Wait ARQ
 
-![[lgw2e-stop-and-wait-fsm.png]]
+![lgw2e-stop-and-wait-fsm.png](../attachments/lgw2e-stop-and-wait-fsm.png)
 *Finite State Machine (FSM) Pengirim dan Penerima pada Stop-and-Wait ARQ.*
 
-![[lgw2e-stop-and-wait-timing.png]]
+![lgw2e-stop-and-wait-timing.png](../attachments/lgw2e-stop-and-wait-timing.png)
 *Diagram Waktu Transmisi Stop-and-Wait ARQ.*
 
 ```
@@ -275,13 +275,13 @@ $$\eta_{SW} = \frac{n_f - n_o}{R \cdot E[t_{total}]} = (1 - P_f) \eta_0 = (1 - P
 ### 2.5 Go-Back-N (GBN) ARQ
 Untuk mengatasi kelemahan Stop-and-Wait di mana pengirim banyak menganggur, **Go-Back-N** menerapkan teknik **pipelining**. Pengirim diizinkan mentransmisikan sejumlah frame tanpa menunggu ACK, dibatasi oleh ukuran jendela transmisi (*Send Window*, $W_s$).
 
-![[lgw2e-gobackn-sliding-window.png]]
+![lgw2e-gobackn-sliding-window.png](../attachments/lgw2e-gobackn-sliding-window.png)
 *Konsep Sliding Window pada Pengirim dan Penerima Go-Back-N.*
 
-![[lgw2e-gobackn-timeline.png]]
+![lgw2e-gobackn-timeline.png](../attachments/lgw2e-gobackn-timeline.png)
 *Timeline Transmisi Pipelined Go-Back-N.*
 
-![[lgw2e-gobackn-recovery-timeline.png]]
+![lgw2e-gobackn-recovery-timeline.png](../attachments/lgw2e-gobackn-recovery-timeline.png)
 *Timeline Penanganan Error pada Go-Back-N.*
 
 ```
@@ -344,10 +344,10 @@ $$\eta_{GBN} = \frac{1 - P_f}{1 + (W_s - 1) P_f} \cdot \left(1 - \frac{n_o}{n_f}
 
 ### 2.8 Selective Repeat (SR) ARQ
 
-![[lgw2e-selective-repeat-window.png]]
+![lgw2e-selective-repeat-window.png](../attachments/lgw2e-selective-repeat-window.png)
 *Jendela Pengirim dan Jendela Penerima pada Selective Repeat ARQ.*
 
-![[lgw2e-selective-repeat-recovery.png]]
+![lgw2e-selective-repeat-recovery.png](../attachments/lgw2e-selective-repeat-recovery.png)
 *Timeline Pemulihan Error pada Selective Repeat: Hanya Frame yang Rusak yang Ditransmisikan Ulang.*
 
 **Karakteristik Utama Selective Repeat:**
@@ -371,7 +371,7 @@ SENDER                                                    RECEIVER (Buffer Wr > 
 
 ### 2.9 Aturan Ukuran Jendela Selective Repeat: $W_s + W_r \le 2^m$
 
-![[lgw2e-selective-repeat-window-condition.png]]
+![lgw2e-selective-repeat-window-condition.png](../attachments/lgw2e-selective-repeat-window-condition.png)
 
 Untuk mencegah tumpang tindih antara rentang nomor urut frame lama yang mungkin dikirim ulang dan rentang frame baru yang diharapkan oleh penerima ketika seluruh ACK hilang:
 $$W_s + W_r \le 2^m$$
@@ -400,7 +400,7 @@ Perhatikan bahwa efisiensi Selective Repeat **sama sekali tidak terdegradasi ole
 
 ### 2.11 Perbandingan Komprehensif Protokol ARQ
 
-![[lgw2e-arq-efficiency-comparison.png]]
+![lgw2e-arq-efficiency-comparison.png](../attachments/lgw2e-arq-efficiency-comparison.png)
 *Perbandingan Efisiensi ARQ: Stop-and-Wait vs Go-Back-N vs Selective Repeat.*
 
 | Aspek Evaluasi | Stop-and-Wait ARQ | Go-Back-N ARQ | Selective Repeat ARQ |
@@ -461,7 +461,7 @@ PENERIMA (Kedatangan Tidak Teratur / Jitter):
 
 ### 4.2 Mekanisme Playout Buffer
 
-![[lgw2e-playout-buffer.png]]
+![lgw2e-playout-buffer.png](../attachments/lgw2e-playout-buffer.png)
 
 Untuk merekonstruksi sinyal suara/video agar kembali periodik dan mulus:
 1. Penerima menyediakan **Playout Buffer**.
@@ -512,7 +512,7 @@ Transmission Control Protocol (TCP) mengimplementasikan seluruh teori peer-to-pe
 
 #### A. 3-Way Handshake (Pembentukan Koneksi):
 
-![[lgw2e-tcp-three-way-handshake.png]]
+![lgw2e-tcp-three-way-handshake.png](../attachments/lgw2e-tcp-three-way-handshake.png)
 
 ```
 CLIENT (Host A)                                             SERVER (Host B)
@@ -529,13 +529,13 @@ ESTAB |--- [ACK, Seq = x + 1, Ack = y + 1] ----------------------->|  ESTABLISHE
 
 #### B. Pertukaran Data & Piggybacking:
 
-![[lgw2e-tcp-data-exchange.png]]
+![lgw2e-tcp-data-exchange.png](../attachments/lgw2e-tcp-data-exchange.png)
 
 - Paket data dapat sekaligus membawa nomor ACK untuk arah sebaliknya (*piggybacking*), menghemat transmisi paket terpisah.
 
 #### C. Graceful Close (Pemutusan Koneksi 4-Way Handshake):
 
-![[lgw2e-tcp-connection-termination.png]]
+![lgw2e-tcp-connection-termination.png](../attachments/lgw2e-tcp-connection-termination.png)
 
 ```
 CLIENT (Host A)                                             SERVER (Host B)
@@ -557,7 +557,7 @@ CLIENT (Host A)                                             SERVER (Host B)
 
 ### 5.4 TCP Sliding Window Flow Control & Advertised Window
 
-![[lgw2e-tcp-window-flow-control.png]]
+![lgw2e-tcp-window-flow-control.png](../attachments/lgw2e-tcp-window-flow-control.png)
 
 TCP memisahkan kendali aliran dari kendali error melalui field **Window Size ($W_A$)**:
 - Penerima selalu mengumumkan sisa ruang buffernya di setiap header segmen TCP:
@@ -598,7 +598,7 @@ Tantangan utama framing adalah **Transparansi Data (*Data Transparency*)**: mema
 
 ### 6.2 Character-Oriented Framing & Byte Stuffing
 
-![[lgw2e-character-oriented-framing.png]]
+![lgw2e-character-oriented-framing.png](../attachments/lgw2e-character-oriented-framing.png)
 
 - Digunakan pada protokol berbasis karakter teks (seperti BISYNC).
 - Frame diawali karakter khusus `DLE STX` (*Data Link Escape - Start of Text*) dan diakhiri `DLE ETX` (*End of Text*).
@@ -609,7 +609,7 @@ Tantangan utama framing adalah **Transparansi Data (*Data Transparency*)**: mema
 
 ### 6.3 Bit-Oriented Framing & Bit Stuffing (HDLC)
 
-![[lgw2e-hdlc-bit-stuffing.png]]
+![lgw2e-hdlc-bit-stuffing.png](../attachments/lgw2e-hdlc-bit-stuffing.png)
 
 Protokol modern berbasis bit seperti **HDLC** menggunakan pola flag delimeter unik 8-bit:
 $$\text{Flag Pattern} = \mathbf{01111110} \quad (\text{0x7E, yaitu enam angka 1 berurutan diapit angka 0})$$
@@ -637,7 +637,7 @@ Penerima memantau aliran bit. Setiap kali menemukan lima bit '1' berurutan (`111
 
 ### 6.4 Generic Framing Procedure (GFP)
 
-![[lgw2e-gfp-frame-format.png]]
+![lgw2e-gfp-frame-format.png](../attachments/lgw2e-gfp-frame-format.png)
 
 Didefinisikan dalam standar ITU-T G.7041, GFP digunakan untuk memetakan paket data variabel (seperti Ethernet dan IP) ke dalam jaringan sinkron transport optik berkecepatan tinggi (SONET/SDH):
 - Tidak menggunakan bit stuffing yang membuat panjang frame tidak pasti.
@@ -658,7 +658,7 @@ Didefinisikan dalam standar ITU-T G.7041, GFP digunakan untuk memetakan paket da
 
 ### 7.2 Struktur Frame PPP
 
-![[lgw2e-ppp-frame-format.png]]
+![lgw2e-ppp-frame-format.png](../attachments/lgw2e-ppp-frame-format.png)
 
 ```
 +----------+----------+----------+----------+----------------+----------+----------+
@@ -684,7 +684,7 @@ Didefinisikan dalam standar ITU-T G.7041, GFP digunakan untuk memetakan paket da
 
 ### 7.3 Byte Stuffing pada PPP
 
-![[lgw2e-ppp-byte-stuffing.png]]
+![lgw2e-ppp-byte-stuffing.png](../attachments/lgw2e-ppp-byte-stuffing.png)
 
 PPP beroperasi secara berorientasi karakter/byte (*character-oriented*). Karakter kontrol escape yang digunakan adalah `0x7D` (`01111101`):
 1. Jika byte flag `0x7E` muncul di dalam payload:
@@ -707,10 +707,10 @@ Arsitektur PPP terdiri atas 3 komponen fungsional yang bekerja bertahap:
 
 ### 7.5 Siklus Hidup Koneksi PPP (Link Transition Phases)
 
-![[lgw2e-ppp-phases.png]]
+![lgw2e-ppp-phases.png](../attachments/lgw2e-ppp-phases.png)
 *State Machine Fase Transisi PPP.*
 
-![[lgw2e-ppp-connection-setup-example.png]]
+![lgw2e-ppp-connection-setup-example.png](../attachments/lgw2e-ppp-connection-setup-example.png)
 *Contoh Prosedur Setup Koneksi PPP Dial-up ke ISP.*
 
 ```
@@ -763,7 +763,7 @@ HDLC (ISO 3309 / 4335) mendefinisikan tiga tipe stasiun logis:
 
 ### 8.3 Format Frame & Field Kontrol HDLC
 
-![[lgw2e-hdlc-control-field.png]]
+![lgw2e-hdlc-control-field.png](../attachments/lgw2e-hdlc-control-field.png)
 
 Struktur Frame HDLC:
 ```
@@ -824,7 +824,7 @@ Digunakan untuk manajemen link, negosiasi mode kerja, dan pemutusan sesi. 5 bit 
 
 #### A. Operasi NRM Polling (Primary A melayani Secondaries B dan C):
 
-![[lgw2e-hdlc-nrm-example.png]]
+![lgw2e-hdlc-nrm-example.png](../attachments/lgw2e-hdlc-nrm-example.png)
 
 ```
 PRIMARY A                                       SECONDARY B        SECONDARY C
@@ -842,7 +842,7 @@ PRIMARY A                                       SECONDARY B        SECONDARY C
 
 #### B. Operasi ABM Peer-to-Peer (Stasiun Gabungan A dan B):
 
-![[lgw2e-hdlc-abm-example.png]]
+![lgw2e-hdlc-abm-example.png](../attachments/lgw2e-hdlc-abm-example.png)
 
 - Inisialisasi: Stasiun A mengirim `SABM`, Stasiun B membalas `UA`.
 - Transfer data dua arah simultan memanfaatkan field $N(S)$ dan $N(R)$ pada I-frame untuk saling mengakui data (*piggybacking*).
@@ -854,7 +854,7 @@ PRIMARY A                                       SECONDARY B        SECONDARY C
 
 ### 9.1 Konsep Dasar & Tradeoff Statistical Multiplexing
 
-![[lgw2e-statistical-multiplexing-buffer.png]]
+![lgw2e-statistical-multiplexing-buffer.png](../attachments/lgw2e-statistical-multiplexing-buffer.png)
 
 - **Statistical Multiplexing:** Mengkonsentrasikan trafik yang bersifat meletup-letup (*bursty traffic*) dari sejumlah jalur masukan (*input lines*) ke dalam satu saluran transmisi bersama (*shared output line*). Hal ini menghasilkan efisiensi penggunaan link yang jauh lebih tinggi dan penghematan biaya (*greater efficiency and lower cost*).
 - **Tradeoff Delay vs Efisiensi:**
@@ -906,7 +906,7 @@ Berdasarkan pengukuran trafik aktual di Internet (sumber: *caida.org*):
 
 ### 9.3 Analisis Model Antrean M/M/1/K (Buffer Terbatas)
 
-![[lgw2e-mm1k-queue-model.png]]
+![lgw2e-mm1k-queue-model.png](../attachments/lgw2e-mm1k-queue-model.png)
 
 #### A. Definisi & Parameter Model M/M/1/K
 - **Kedatangan Poisson:** Paket tiba dengan laju kedatangan rata-rata $\lambda$ paket/detik.
@@ -962,7 +962,7 @@ Pada sistem antrean $M/M/1$, buffer dianggap tak terbatas:
 Pada model **M/D/1**, paket tiba secara Poisson namun memiliki panjang dan waktu layanan yang konstan (*deterministic service time*):
 $$E[T]_D = \frac{1}{\mu}\left[1 + \frac{\rho}{2(1 - \rho)}\right] = \frac{1}{\mu}\left[\frac{2 - \rho}{2(1 - \rho)}\right]$$
 
-![[lgw2e-mm1-queue-delay-curve.png]]
+![lgw2e-mm1-queue-delay-curve.png](../attachments/lgw2e-mm1-queue-delay-curve.png)
 *Kurva Perbandingan Normalized Average Delay ($E[T]/E[X]$) antara M/M/1 dan M/D/1.*
 
 - Delay rata-rata pada sistem M/D/1 selalu **lebih rendah** dibandingkan sistem M/M/1 untuk setiap tingkat beban $\rho$.
@@ -1044,7 +1044,7 @@ Semakin besar skala sistem (*larger flows*), utilisasi trunk semakin tinggi dan 
 
 ### 9.7 Packet Speech Multiplexing & Packet Voice Switching
 
-![[lgw2e-packet-speech-multiplexing.png]]
+![lgw2e-packet-speech-multiplexing.png](../attachments/lgw2e-packet-speech-multiplexing.png)
 
 #### A. Konsep Packet Speech Multiplexing
 - Suara digital dikemas ke dalam paket-paket berukuran tetap (*fixed-length packets*).
@@ -1055,7 +1055,7 @@ Semakin besar skala sistem (*larger flows*), utilisasi trunk semakin tinggi dan 
 
 #### B. Isu & Mekanisme Penanganan Packet Voice
 
-![[lgw2e-playout-buffer.png]]
+![lgw2e-playout-buffer.png](../attachments/lgw2e-playout-buffer.png)
 
 1. **Packetization Delay:** Waktu yang dibutuhkan untuk mengumpulkan sampel audio suara hingga mengisi penuh satu paket payload.
 2. **Jitter (Variasi Keterlambatan Paket):** Interval kedatangan paket di sisi penerima bervariasi secara acak akibat perbedaan delay antrean di switch jaringan.

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Week 1: Information Systems in Global Business Today"
 tags:
   - information-systems
@@ -61,7 +61,7 @@ type: study-note
 Dalam lanskap bisnis modern, sistem informasi bukan lagi sekadar alat administrasi pelengkap di divisi back-office, melainkan **fondasi penentu daya hidup (*vital foundation*)** bagi kelangsungan usaha. Transformasi ini dipicu oleh:
 - **Pengeluaran Modal TI Masif:** Investasi teknologi informasi menyumbang lebih dari 50% dari total pengeluaran modal peralatan bisnis di negara maju.
 
-![[mis16e-fig-1-1-it-capital-investment.jpg]]
+![mis16e-fig-1-1-it-capital-investment.jpg](../attachments/mis16e-fig-1-1-it-capital-investment.jpg)
 *Gambar 1.1: Tren Investasi Modal Teknologi Informasi Korporat (Laudon & Laudon)*
 - **Operasional Real-Time:** Pasar keuangan, e-commerce, dan rantai pasokan global bergerak secara instan 24/7.
 - **Ketergantungan Ekosistem:** Tanpa infrastruktur komputasi dan jaringan, operasional ritel besar (seperti Amazon, Walmart), perbankan, dan manufaktur akan lumpuh total.
@@ -171,7 +171,7 @@ Perusahaan berinvestasi masif dalam sistem informasi untuk mencapai enam sasaran
 ### 2.7 Interdependensi Organisasi dan Sistem Informasi
 Hubungan antara strategi bisnis, aturan, dan prosedur organisasi dengan perangkat keras, perangkat lunak, dan basis data bersifat **timbal balik (*interdependent*)**:
 
-![[mis16e-fig-1-2-interdependence-org-is.jpg]]
+![mis16e-fig-1-2-interdependence-org-is.jpg](../attachments/mis16e-fig-1-2-interdependence-org-is.jpg)
 *Gambar 1.2: Hubungan Interdependensi Antara Organisasi dan Sistem Informasi*
 - Strategi bisnis menentukan sistem informasi apa yang harus dibangun.
 - Sistem informasi yang dimiliki saat ini menentukan strategi bisnis apa yang realistis untuk dieksekusi di masa depan.
@@ -195,7 +195,7 @@ Hubungan antara strategi bisnis, aturan, dan prosedur organisasi dengan perangka
 > - **Data:** Aliran fakta mentah (*raw facts*) yang mewakili peristiwa yang terjadi dalam organisasi atau lingkungan fisik sebelum diorganisasikan ke dalam bentuk yang dapat dipahami dan digunakan manusia.
 > - **Informasi:** Data yang telah diolah, dibentuk, dan disusun ke dalam format yang memiliki makna dan nilai guna bagi manusia untuk mengambil keputusan.
 
-![[mis16e-fig-1-3-data-and-information.jpg]]
+![mis16e-fig-1-3-data-and-information.jpg](../attachments/mis16e-fig-1-3-data-and-information.jpg)
 *Gambar 1.3: Konsep Data Mentah vs Informasi yang Diproses*
 
 #### Tabel Komparasi: Data vs Informasi
@@ -209,7 +209,7 @@ Hubungan antara strategi bisnis, aturan, dan prosedur organisasi dengan perangka
 ### 3.2 Siklus Pemrosesan Informasi (Input, Processing, Output, Feedback)
 Secara teknis, sistem informasi mengumpulkan, menyimpan, dan menyebarkan informasi melalui empat tahapan utama:
 
-![[mis16e-fig-1-4-functions-of-information-system.jpg]]
+![mis16e-fig-1-4-functions-of-information-system.jpg](../attachments/mis16e-fig-1-4-functions-of-information-system.jpg)
 *Gambar 1.4: Fungsi-Fungsi Fundamental Sistem Informasi (Input, Processing, Output, Feedback)*
 
 ```
@@ -248,7 +248,7 @@ Secara teknis, sistem informasi mengumpulkan, menyimpan, dan menyebarkan informa
 
 ## 4. Tiga Dimensi Sistem Informasi (Dimensions of IS)
 
-![[mis16e-fig-1-5-dimensions-of-information-systems.jpg]]
+![mis16e-fig-1-5-dimensions-of-information-systems.jpg](../attachments/mis16e-fig-1-5-dimensions-of-information-systems.jpg)
 *Gambar 1.5: Tiga Pilar Dimensi Sistem Informasi: Organisasi, Manajemen, dan Teknologi*
 
 Untuk memahami sistem informasi seutuhnya, seseorang tidak boleh hanya memandang dari sudut pandang teknologi komputer (*computer literacy*). Diperlukan **pemahaman sistem informasi (*information systems literacy*)** yang mencakup pemahaman dimensi perilaku dan organisasi.
@@ -268,7 +268,7 @@ Untuk memahami sistem informasi seutuhnya, seseorang tidak boleh hanya memandang
 
 ### 4.1 Dimensi Organisasi (Organizations)
 Organisasi memiliki struktur formal yang terdiri dari tingkat wewenang dan pembagian kerja yang jelas:
-![[mis16e-fig-1-6-levels-in-a-firm.jpg]]
+![mis16e-fig-1-6-levels-in-a-firm.jpg](../attachments/mis16e-fig-1-6-levels-in-a-firm.jpg)
 *Gambar 1.6: Tingkatan Manajemen dan Kelompok Kerja dalam Organisasi Bisnis*
 
 - **Tingkatan Hierarki Organisasi:**
@@ -309,7 +309,7 @@ Sistem logistik United Parcel Service (UPS) adalah contoh ideal yang mengintegra
 ### 5.1 Rantai Nilai Informasi Bisnis (Business Information Value Chain)
 Investasi pada SI tidak sekadar membeli barang modal, melainkan bagian dari proses penciptaan nilai ekonomi.
 
-![[mis16e-fig-1-7-business-information-value-chain.jpg]]
+![mis16e-fig-1-7-business-information-value-chain.jpg](../attachments/mis16e-fig-1-7-business-information-value-chain.jpg)
 *Gambar 1.7: The Business Information Value Chain — Dari Pengolahan Data hingga Penciptaan Nilai Bisnis*
 
 ```
@@ -339,7 +339,7 @@ Investasi pada SI tidak sekadar membeli barang modal, melainkan bagian dari pros
 ### 5.2 Variasi Pengembalian Investasi TI (Variation in Returns)
 Penelitian empiris menunjukkan bahwa perusahaan yang menginvestasikan jumlah uang yang persis sama pada teknologi informasi dapat memperoleh hasil pengembalian (*return on investment - ROI*) yang sangat berbeda drastis:
 
-![[mis16e-fig-1-8-variation-in-returns-on-it.jpg]]
+![mis16e-fig-1-8-variation-in-returns-on-it.jpg](../attachments/mis16e-fig-1-8-variation-in-returns-on-it.jpg)
 *Gambar 1.8: Variasi Pengembalian Investasi TI: Peran Kritis Aset Komplementer*
 - Sebagian kecil perusahaan meraih lompatan laba berlipat ganda (*high performers*).
 - Sebagian besar memperoleh hasil rata-rata (*moderate performers*).
@@ -372,7 +372,7 @@ Aset komplementer adalah aset tambahan yang diwajibkan ada agar investasi utama 
 
 ## 6. Pendekatan Kontemporer terhadap Sistem Informasi
 
-![[mis16e-fig-1-9-contemporary-approaches-to-is.jpg]]
+![mis16e-fig-1-9-contemporary-approaches-to-is.jpg](../attachments/mis16e-fig-1-9-contemporary-approaches-to-is.jpg)
 *Gambar 1.9: Pendekatan Kontemporer Studi Sistem Informasi (Teknis vs Perilaku)*
 
 Studi tentang sistem informasi merupakan bidang multidisiplin yang memadukan perspektif teknis dan perilaku:
@@ -414,7 +414,7 @@ Studi tentang sistem informasi merupakan bidang multidisiplin yang memadukan per
 ### 6.3 Pendekatan Sosioteknikal (Sociotechnical Perspective)
 Buku teks Laudon & Laudon mengadopsi pendekatan **Sistem Sosioteknikal**:
 
-![[mis16e-fig-1-10-sociotechnical-perspective.jpg]]
+![mis16e-fig-1-10-sociotechnical-perspective.jpg](../attachments/mis16e-fig-1-10-sociotechnical-perspective.jpg)
 *Gambar 1.10: Perspektif Sosioteknikal — Optimasi Bersama Teknologi dan Organisasi*
 - Kinerja sistem organisasi tercapai optimal ketika teknologi dan organisasi saling beradaptasi satu sama lain (*mutual adjustment*).
 - Teknologi harus diubah dan dirancang agar sesuai dengan kebutuhan organisasi dan pengguna, sementara organisasi dan manusia harus dilatih dan disesuaikan agar mampu memanfaatkan kapabilitas teknologi baru.

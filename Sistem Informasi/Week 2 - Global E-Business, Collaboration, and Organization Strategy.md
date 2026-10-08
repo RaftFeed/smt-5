@@ -1,4 +1,4 @@
----
+﻿---
 title: "Week 2: Global E-Business, Collaboration, and Organization Strategy"
 tags:
   - business-processes
@@ -88,7 +88,7 @@ type: study-note
 ### 1.3 Analisis Alur Proses: The Order Fulfillment Process
 Pemenuhan pesanan adalah contoh klasik proses bisnis lintas fungsi:
 
-![[mis16e-fig-2-1-order-fulfillment-process.jpg]]
+![mis16e-fig-2-1-order-fulfillment-process.jpg](../attachments/mis16e-fig-2-1-order-fulfillment-process.jpg)
 *Gambar 2.1: Alur Pemenuhan Pesanan Lintas Fungsi (Penjualan, Akuntansi, Manufaktur)*
 
 ```
@@ -144,7 +144,7 @@ Suatu organisasi bisnis tidak hanya memiliki satu sistem tunggal, melainkan berb
   - Volume data masif (*high volume*).
   - Berorientasi internal, aturan terdefinisi secara baku (*highly structured*).
   - Bersifat kritis (*mission-critical*); jika TPS terhenti beberapa menit saja, operasional perusahaan terancam runtuh.
-![[mis16e-fig-2-2-payroll-tps.jpg]]
+![mis16e-fig-2-2-payroll-tps.jpg](../attachments/mis16e-fig-2-2-payroll-tps.jpg)
 *Gambar 2.2: Alur Pemrosesan Payroll TPS dan Pembaruan Master File*
 
 - **Contoh Nyata: Payroll TPS (Sistem Penggajian)**
@@ -155,7 +155,7 @@ Suatu organisasi bisnis tidak hanya memiliki satu sistem tunggal, melainkan berb
 ### 2.2 Management Information Systems (MIS)
 - **Pengguna Utama:** Manajer tingkat menengah (*middle management*).
 
-![[mis16e-fig-2-3-mis-obtains-data-from-tps.jpg]]
+![mis16e-fig-2-3-mis-obtains-data-from-tps.jpg](../attachments/mis16e-fig-2-3-mis-obtains-data-from-tps.jpg)
 *Gambar 2.3: Bagaimana MIS Memperoleh Data Transaksi Ringkasan dari TPS*
 - **Tujuan Utama:** Membantu memantau, mengendalikan, dan mengelola kinerja operasional serta memprediksi performa masa depan melalui laporan ringkasan periodik.
 - **Karakteristik Kunci:**
@@ -171,7 +171,7 @@ Suatu organisasi bisnis tidak hanya memiliki satu sistem tunggal, melainkan berb
   - Menggunakan model analitis matematis yang canggih (pemrograman linear, regresi, simulasi Monte Carlo).
   - Menggabungkan data internal (dari TPS dan MIS) dengan data eksternal (harga komoditas pasar, tren suku bunga bank, tarif kompetitor).
   - Memungkinkan analisis skenario (*What-If Analysis*) dan analisis sensitivitas (*Sensitivity Analysis*).
-![[mis16e-fig-2-5-voyage-estimating-dss.jpg]]
+![mis16e-fig-2-5-voyage-estimating-dss.jpg](../attachments/mis16e-fig-2-5-voyage-estimating-dss.jpg)
 *Gambar 2.4: Voyage-Estimating Decision Support System (DSS Perkapalan)*
 
 - **Contoh Kasus: Voyage-Estimating Decision Support System**
@@ -200,7 +200,7 @@ Suatu organisasi bisnis tidak hanya memiliki satu sistem tunggal, melainkan berb
 
 ## 3. Arsitektur Aplikasi Perusahaan (Enterprise Applications)
 
-![[mis16e-fig-2-6-enterprise-application-architecture.jpg]]
+![mis16e-fig-2-6-enterprise-application-architecture.jpg](../attachments/mis16e-fig-2-6-enterprise-application-architecture.jpg)
 *Gambar 2.5: Arsitektur Aplikasi Enterprise Terintegrasi (ERP, SCM, CRM, KMS)*
 
 ### 3.1 Tantangan Silo Fungsional dan Urgensi Integrasi
@@ -276,7 +276,7 @@ Banyak perusahaan tradisional menderita masalah **Silo Informasi (*Information S
 ### 4.2 Piramida Persyaratan Kolaborasi
 Kolaborasi yang berhasil tidak cukup hanya dengan membeli perangkat lunak canggih. Keberhasilan membutuhkan dua pilar fondasi:
 
-![[mis16e-fig-2-7-requirements-for-collaboration.jpg]]
+![mis16e-fig-2-7-requirements-for-collaboration.jpg](../attachments/mis16e-fig-2-7-requirements-for-collaboration.jpg)
 *Gambar 2.6: Persyaratan Keberhasilan Kolaborasi: Budaya Kolaboratif dan Teknologi*
 1. **Budaya Kolaboratif (*Collaborative Culture*):** Manajemen puncak tidak menganut komando-kontrol sentralistik yang kaku, melainkan mendorong komunikasi terbuka, penghargaan kerja tim, dan transparansi ide.
 2. **Teknologi Kolaborasi (*Collaboration Technology*):** Penyediaan alat-alat digital yang memadai untuk mendukung interaksi tanpa hambatan fisik.
@@ -284,7 +284,7 @@ Kolaborasi yang berhasil tidak cukup hanya dengan membeli perangkat lunak canggi
 ### 4.3 Matriks Kolaborasi Waktu/Ruang (Time/Space Collaboration Matrix)
 Kerangka kerja evaluasi alat kolaborasi berdasarkan dimensi waktu (*synchronous vs asynchronous*) dan lokasi geografis (*colocated vs remote*):
 
-![[mis16e-fig-2-8-time-space-collaboration-matrix.jpg]]
+![mis16e-fig-2-8-time-space-collaboration-matrix.jpg](../attachments/mis16e-fig-2-8-time-space-collaboration-matrix.jpg)
 *Gambar 2.7: The Time/Space Collaboration and Social Tool Matrix*
 
 ```
@@ -309,7 +309,7 @@ Kerangka kerja evaluasi alat kolaborasi berdasarkan dimensi waktu (*synchronous 
 ### 5.1 Hubungan Timbal Balik Dua Arah (Two-Way Relationship)
 Hubungan antara organisasi dan teknologi informasi bersifat interaktif dan saling memengaruhi:
 
-![[si-bab2-p13-hubungan-organisasi-ti.png]]
+![si-bab2-p13-hubungan-organisasi-ti.png](../attachments/si-bab2-p13-hubungan-organisasi-ti.png)
 *Gambar 2.8: Hubungan Dua Arah Antara Organisasi dan Teknologi Informasi (Slide Dosen KOM1333A)*
 
 ```
@@ -337,7 +337,7 @@ Hubungan antara organisasi dan teknologi informasi bersifat interaktif dan salin
 ### 5.3 Dampak Perilaku: Resistensi Organisasi terhadap Inovasi TI
 Inovasi sistem informasi kerap kali memicu penolakan keras (*resistance*) dari karyawan karena TI mengubah struktur kekuasaan dan alur kerja:
 
-![[si-bab2-p15-resistensi-organisasi-leavitt.png]]
+![si-bab2-p15-resistensi-organisasi-leavitt.png](../attachments/si-bab2-p15-resistensi-organisasi-leavitt.png)
 *Gambar 2.9: Resistensi Organisasi terhadap Inovasi SI (Model Belah Ketupat Leavitt)*
 
 ```
@@ -396,7 +396,7 @@ Posisi strategis dan profitabilitas perusahaan di suatu industri ditentukan oleh
 ### 6.2 Empat Strategi Kompetitif Dasar Berbasis SI
 Untuk memenangkan persaingan melawan lima kekuatan Porter, perusahaan dapat menerapkan salah satu dari empat strategi generik:
 
-![[si-bab2-p17-4-strategi-kompetitif.png]]
+![si-bab2-p17-4-strategi-kompetitif.png](../attachments/si-bab2-p17-4-strategi-kompetitif.png)
 *Gambar 2.10: Empat Strategi Kompetitif Dasar (Slide Dosen KOM1333A)*
 1. **Kepemimpinan Biaya Rendah (*Low-Cost Leadership*):**
    - Menggunakan sistem informasi untuk menekan biaya operasional serendah mungkin sehingga mampu menawarkan harga termurah.
@@ -414,7 +414,7 @@ Untuk memenangkan persaingan melawan lima kekuatan Porter, perusahaan dapat mene
 ### 6.3 Model Rantai Nilai (The Value Chain Model)
 Model rantai nilai membagi aktivitas perusahaan ke dalam dua kategori:
 
-![[si-bab2-p18-the-value-chain-model.png]]
+![si-bab2-p18-the-value-chain-model.png](../attachments/si-bab2-p18-the-value-chain-model.png)
 *Gambar 2.11: The Value Chain Model (Aktivitas Utama & Pendukung Porter)* **Aktivitas Utama (*Primary Activities*)** dan **Aktivitas Pendukung (*Support Activities*)**:
 
 ```
@@ -439,7 +439,7 @@ Model rantai nilai membagi aktivitas perusahaan ke dalam dua kategori:
 ### 6.4 Jaring Nilai (The Value Web)
 - Dalam era digital, rantai nilai linier tradisional telah bertransformasi menjadi **Jaring Nilai (*The Value Web*)**.
 
-![[si-bab2-p19-the-value-web.png]]
+![si-bab2-p19-the-value-web.png](../attachments/si-bab2-p19-the-value-web.png)
 *Gambar 2.12: The Value Web — Ekosistem Jaring Nilai Terkoordinasi Digital*
 - Jaring nilai adalah ekosistem kumpulan perusahaan independen yang menyelaraskan rantai nilai mereka menggunakan teknologi informasi untuk memproduksi produk/jasa bagi pasar secara terkoordinasi dan fleksibel.
 - Lebih fleksibel dan adaptif terhadap lonjakan permintaan pasar dibandingkan rantai pasok linier kaku.

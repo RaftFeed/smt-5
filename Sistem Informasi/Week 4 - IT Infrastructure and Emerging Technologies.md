@@ -1,4 +1,4 @@
----
+﻿---
 title: "Week 4: IT Infrastructure and Emerging Technologies"
 tags:
   - it-infrastructure
@@ -70,7 +70,7 @@ type: study-note
 
 ### 1.1 Hubungan Perusahaan, Infrastruktur TI, dan Kapabilitas Bisnis
 
-![[mis16e-fig-5-1-connection-firm-it-infrastructure.jpg]]
+![mis16e-fig-5-1-connection-firm-it-infrastructure.jpg](../attachments/mis16e-fig-5-1-connection-firm-it-infrastructure.jpg)
 *Gambar 4.1: Hubungan Perusahaan, Infrastruktur TI, dan Kapabilitas Bisnis*
 
 > [!info] Definisi Infrastruktur TI
@@ -110,7 +110,7 @@ Layanan yang disediakan oleh infrastruktur TI meliputi:
 
 ## 2. Lima Era Evolusi Infrastruktur TI
 
-![[mis16e-fig-5-2-stages-in-it-infrastructure-evolution.jpg]]
+![mis16e-fig-5-2-stages-in-it-infrastructure-evolution.jpg](../attachments/mis16e-fig-5-2-stages-in-it-infrastructure-evolution.jpg)
 *Gambar 4.2: Tahapan Evolusi Infrastruktur TI (Mainframe, PC, Client/Server, Enterprise, Cloud/Mobile)*
 
 Evolusi infrastruktur TI terbagi ke dalam lima era komputasi utama:
@@ -148,7 +148,7 @@ Era 5: Cloud and Mobile Computing (2000 - sekarang)
 #### Arsitektur Client/Server Bertingkat (Multitier / N-Tier Client/Server Architecture)
 Dalam lingkungan bisnis modern dan aplikasi berbasis web, arsitektur dibagi menjadi beberapa lapis (*tiers*):
 
-![[mis16e-fig-5-3-multitiered-client-server-network.jpg]]
+![mis16e-fig-5-3-multitiered-client-server-network.jpg](../attachments/mis16e-fig-5-3-multitiered-client-server-network.jpg)
 *Gambar 4.3: Arsitektur Jaringan Client/Server Multi-Tier (N-Tier)*
 
 ```
@@ -181,10 +181,10 @@ Dalam lingkungan bisnis modern dan aplikasi berbasis web, arsitektur dibagi menj
 ### 3.1 Hukum Moore dan Kinerja Mikroprosesor
 Dirumuskan oleh Gordon Moore
 
-![[mis16e-fig-5-4-moores-law-microprocessor-performance.jpg]]
+![mis16e-fig-5-4-moores-law-microprocessor-performance.jpg](../attachments/mis16e-fig-5-4-moores-law-microprocessor-performance.jpg)
 *Gambar 4.4: Hukum Moore dan Peningkatan Eksponensial Kinerja Mikroprosesor*
 
-![[mis16e-fig-5-5-falling-cost-of-chips.jpg]]
+![mis16e-fig-5-5-falling-cost-of-chips.jpg](../attachments/mis16e-fig-5-5-falling-cost-of-chips.jpg)
 *Gambar 4.5: Penurunan Drastis Biaya Produksi Chip Silikon* (salah satu pendiri Intel) pada tahun 1965:
 > [!note] Pernyataan Hukum Moore
 > 1. Jumlah transistor pada sebuah chip mikroprosesor berlipat ganda kira-kira setiap 18 hingga 24 bulan.
@@ -195,7 +195,7 @@ Dirumuskan oleh Gordon Moore
 
 ### 3.2 Hukum Penyimpanan Digital Massal (Law of Mass Digital Storage)
 
-![[mis16e-fig-5-6-storage-per-dollar-exponential.jpg]]
+![mis16e-fig-5-6-storage-per-dollar-exponential.jpg](../attachments/mis16e-fig-5-6-storage-per-dollar-exponential.jpg)
 *Gambar 4.6: Lonjakan Kapasitas Penyimpanan Per Dolar 1950-2020*
 
 - Volume informasi digital di dunia berlipat ganda setiap tahun.
@@ -213,7 +213,7 @@ Dirumuskan oleh Robert Metcalfe (penemu Ethernet):
 
 ### 3.4 Penurunan Drastis Biaya Komunikasi dan Ledakan Internet
 
-![[mis16e-fig-5-7-declining-communications-costs.jpg]]
+![mis16e-fig-5-7-declining-communications-costs.jpg](../attachments/mis16e-fig-5-7-declining-communications-costs.jpg)
 *Gambar 4.7: Penurunan Eksponensial Biaya Komunikasi Internet ($/Mbps)*
 
 - Biaya transmisi data per megabit per detik (Mbps) melalui serat optik dan jaringan internet telah turun ratusan kali lipat.
@@ -230,7 +230,7 @@ Infrastruktur enterprise mustahil beroperasi tanpa kesepakatan standar universal
 
 ## 4. Tujuh Komponen Ekosistem Infrastruktur TI
 
-![[mis16e-fig-5-8-it-infrastructure-ecosystem.jpg]]
+![mis16e-fig-5-8-it-infrastructure-ecosystem.jpg](../attachments/mis16e-fig-5-8-it-infrastructure-ecosystem.jpg)
 *Gambar 4.8: Tujuh Komponen Ekosistem Infrastruktur TI Korporat*
 
 Infrastruktur TI sebuah korporasi tersusun dari 7 komponen ekosistem utama yang harus terkoordinasi secara harmonis:
@@ -282,10 +282,10 @@ Infrastruktur TI sebuah korporasi tersusun dari 7 komponen ekosistem utama yang 
 
 ### 5.3 Komputasi Awan (Cloud Computing)
 
-![[mis16e-fig-5-9-cloud-computing-platform.jpg]]
+![mis16e-fig-5-9-cloud-computing-platform.jpg](../attachments/mis16e-fig-5-9-cloud-computing-platform.jpg)
 *Gambar 4.9: Platform Komputasi Awan (Resource Pooling & Layanan Berbasis Jaringan)*
 
-![[mis16e-fig-5-10-amazon-web-services.jpg]]
+![mis16e-fig-5-10-amazon-web-services.jpg](../attachments/mis16e-fig-5-10-amazon-web-services.jpg)
 *Gambar 4.10: Arsitektur Layanan Cloud Amazon Web Services (AWS)*
 
 Definisi resmi **NIST (*National Institute of Standards and Technology*)**:
@@ -348,7 +348,7 @@ Model yang memungkinkan akses jaringan yang nyaman dan sesuai permintaan (*on-de
 - **Service-Oriented Architecture (SOA):** Pendekatan arsitektur perangkat lunak di mana sistem dibangun dari kumpulan layanan modular independen yang dapat digabungkan kembali untuk melayani berbagai proses bisnis.
 - **Contoh Kasus: Dollar Rent A Car**
 
-![[mis16e-fig-5-11-dollar-rent-a-car-web-services.jpg]]
+![mis16e-fig-5-11-dollar-rent-a-car-web-services.jpg](../attachments/mis16e-fig-5-11-dollar-rent-a-car-web-services.jpg)
 *Gambar 4.11: Arsitektur Web Services Dollar Rent A Car untuk Integrasi Reservasi*
 
   - Dollar Rent A Car menggunakan web services untuk menghubungkan sistem reservasi mobil sewa internalnya langsung ke situs maskapai penerbangan Southwest Airlines.
@@ -356,7 +356,7 @@ Model yang memungkinkan akses jaringan yang nyaman dan sesuai permintaan (*on-de
 
 ### 6.4 Outsourcing Perangkat Lunak dan Cloud Software Services
 
-![[mis16e-fig-5-12-changing-sources-firm-software.jpg]]
+![mis16e-fig-5-12-changing-sources-firm-software.jpg](../attachments/mis16e-fig-5-12-changing-sources-firm-software.jpg)
 *Gambar 4.12: Pergeseran Sumber Perangkat Lunak Perusahaan ke Arah SaaS & Outsourcing*
 
 Perusahaan masa kini memperoleh perangkat lunak melalui tiga sumber eksternal:
@@ -402,7 +402,7 @@ Ketika mengevaluasi biaya perangkat keras atau lunak, biaya pembelian awal hanya
 
 ### 7.4 Model Kekuatan Kompetitif untuk Investasi Infrastruktur TI
 
-![[mis16e-fig-5-13-competitive-forces-model-it-infrastructure.jpg]]
+![mis16e-fig-5-13-competitive-forces-model-it-infrastructure.jpg](../attachments/mis16e-fig-5-13-competitive-forces-model-it-infrastructure.jpg)
 *Gambar 4.13: Model 6 Kekuatan Kompetitif untuk Keputusan Investasi Infrastruktur TI*
 
 Manajer dapat menggunakan model 6 kekuatan kompetitif untuk menentukan berapa besar anggaran yang tepat untuk diinvestasikan pada infrastruktur TI:

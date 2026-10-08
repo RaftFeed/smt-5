@@ -1,4 +1,4 @@
----
+﻿---
 title: "LGW2E Chapter 6: Medium Access Control Protocols and Local Area Networks"
 tags:
   - computer-networks
@@ -183,7 +183,7 @@ $$a = \frac{t_{\text{prop}}}{X} = \frac{t_{\text{prop}}}{L / R} = \frac{R \cdot 
 
 Untuk memahami batas teoretis mutlak efisiensi media bersama, tinjau sistem sederhana dengan 2 stasiun ($A$ dan $B$) yang berjarak $d$ dengan waktu propagasi $t_{\text{prop}}$.
 
-![[lgw2e-mac-two-stations-quiet-time.png]]
+![lgw2e-mac-two-stations-quiet-time.png](../attachments/lgw2e-mac-two-stations-quiet-time.png)
 *Gambar: Model dua stasiun dengan waktu hening (Quiet Time) $2 t_{\text{prop}}$ untuk mencegah tabrakan.*
 
 Agar stasiun $A$ dan stasiun $B$ dapat berbagi satu media transmisi tanpa terjadi tabrakan:
@@ -263,7 +263,7 @@ Protokol Pure ALOHA dikembangkan oleh Norman Abramson di University of Hawaii pa
 - Prinsip operasi: *"Just do it!"*. Kapan pun sebuah stasiun memiliki frame data untuk dikirim, stasiun langsung mentransmisikannya ke media tanpa mengecek apakah stasiun lain sedang mengirim atau tidak.
 - Stasiun mendengarkan acknowledgment (ACK) dari penerima (atau mendengarkan sinyal pantulan sendiri). Jika terjadi tabrakan, frame dianggap rusak/hilang, stasiun menunggu waktu acak (*random backoff*) lalu mentransmisikan ulang frame tersebut.
 
-![[lgw2e-mac-pure-aloha-vulnerable-period.png]]
+![lgw2e-mac-pure-aloha-vulnerable-period.png](../attachments/lgw2e-mac-pure-aloha-vulnerable-period.png)
 *Gambar: Periode rentan (Vulnerable Period) pada Pure ALOHA sepanjang $2X$.*
 
 #### Analisis Matematis Throughput Pure ALOHA:
@@ -299,7 +299,7 @@ Untuk mengatasi kelemahan tabrakan parsial pada Pure ALOHA, Robert (1972) mengus
 - Semua stasiun disinkronisasi dengan sinyal *clock* global.
 - Stasiun **hanya diizinkan mulai mentransmisikan frame tepat pada awal batas slot waktu (*slot boundary*)**. Tidak boleh ada stasiun yang memancarkan sinyal di tengah slot.
 
-![[lgw2e-mac-aloha-throughput-comparison.png]]
+![lgw2e-mac-aloha-throughput-comparison.png](../attachments/lgw2e-mac-aloha-throughput-comparison.png)
 *Gambar: Kurva perbandingan Throughput Pure ALOHA vs Slotted ALOHA.*
 
 #### Analisis Matematis Throughput Slotted ALOHA:
@@ -326,7 +326,7 @@ Pada jaringan kabel berjarak pendek, sinyal merambat relatif sangat cepat ($t_{\
 Konsep dasar **CSMA**: *"Listen before talk"* (Dengarkan media sebelum berbicara). Stasiun melakukan penginderaan pembawa (*carrier sensing*) pada media sebelum memutuskan untuk mentransmisikan frame.
 - **Periode Rentan CSMA:** Jendela kerentanan berkurang drastis dari $X$ menjadi hanya **$t_{\text{prop}}$** (waktu yang dibutuhkan gelombang sinyal untuk mencapai ujung stasiun terjauh).
 
-![[lgw2e-mac-csma-throughput-curves.png]]
+![lgw2e-mac-csma-throughput-curves.png](../attachments/lgw2e-mac-csma-throughput-curves.png)
 *Gambar: Kurva Throughput berbagai varian CSMA (1-persistent, Non-persistent) vs Slotted ALOHA & ALOHA.*
 
 #### Varian Protokol CSMA:
@@ -364,7 +364,7 @@ Meskipun CSMA sudah mendengarkan sebelum berbicara, tabrakan masih bisa terjadi 
 - Jika tegangan terdeteksi melompat di atas ambang batas wajar (menandakan interferensi sinyal stasiun lain), stasiun menyadari tabrakan seketika.
 - **Tindakan Cepat:** Pemancar segera **membatalkan (*abort*)** pengiriman frame, lalu memancarkan sinyal gangguan singkat (**Jam Signal** sebesar 32 s.d. 48 bit) agar stasiun lain di seluruh kabel menyadari tabrakan tersebut, lalu masuk ke prosedur *backoff*.
 
-![[lgw2e-mac-csmacd-reaction-time.png]]
+![lgw2e-mac-csmacd-reaction-time.png](../attachments/lgw2e-mac-csmacd-reaction-time.png)
 *Gambar: Waktu reaksi terburuk deteksi tabrakan CSMA/CD membutuhkan durasi $2 t_{\text{prop}}$.*
 
 #### Waktu Reaksi Terburuk (*Slot Time* = $2 t_{\text{prop}}$):
@@ -415,7 +415,7 @@ Setelah terjadi tabrakan, stasiun-stasiun yang terlibat tidak boleh mencoba mema
 
 ### 3.6 Perbandingan Komprehensif Protokol Random Access terhadap Parameter $a$
 
-![[lgw2e-mac-random-access-efficiency-a.png]]
+![lgw2e-mac-random-access-efficiency-a.png](../attachments/lgw2e-mac-random-access-efficiency-a.png)
 *Gambar: Efisiensi Throughput protokol Random Access terhadap parameter normalisasi $a$.*
 
 Kinerja relatif protokol-protokol akses acak sangat dipengaruhi oleh nilai $a = \frac{t_{\text{prop}}}{X}$:
@@ -450,7 +450,7 @@ Transmisi dijadwalkan secara teratur sehingga **tabrakan antar-frame data dihila
 
 Pada sistem reservasi, waktu transmisi dibagi menjadi siklus-siklus (*cycles*). Setiap siklus diawali dengan **Interval Reservasi (*Reservation Interval*)** yang terdiri dari sejumlah slot kecil (*minislots*), diikuti oleh **Interval Transmisi Data Frame**.
 
-![[lgw2e-mac-reservation-cycles.png]]
+![lgw2e-mac-reservation-cycles.png](../attachments/lgw2e-mac-reservation-cycles.png)
 *Gambar: Struktur siklus sistem reservasi dengan Minislot dan Frame Transmisi.*
 
 1. **Prinsip Operasi:**
@@ -488,7 +488,7 @@ Pada sistem reservasi, waktu transmisi dibagi menjadi siklus-siklus (*cycles*). 
 
 Pada sistem polling, hak akses media diberikan secara bergilir melalui pesan kendali khusus (*poll message*).
 
-![[lgw2e-mac-polling-cycle-time.png]]
+![lgw2e-mac-polling-cycle-time.png](../attachments/lgw2e-mac-polling-cycle-time.png)
 *Gambar: Siklus waktu polling dengan jeda pergantian (Walk Time) $t'$.*
 
 #### Batas Layanan (Service Limits):
@@ -527,7 +527,7 @@ Token-Passing Ring (seperti **IEEE 802.5 Token Ring** dan **FDDI**) adalah bentu
 
 Bagaimana dan kapan stasiun pemancar melepaskan *Free Token* baru ke media cincin? Terdapat tiga metode utama yang memiliki dampak dramatis terhadap efisiensi jaringan:
 
-![[lgw2e-mac-token-reinsertion-methods.png]]
+![lgw2e-mac-token-reinsertion-methods.png](../attachments/lgw2e-mac-token-reinsertion-methods.png)
 *Gambar: Tiga metode pelepasan token: Multi-token, Single-token, dan Single-frame.*
 
 1. **Multi-Token Reinsertion (*Early Token Release*):**
@@ -548,7 +548,7 @@ Bagaimana dan kapan stasiun pemancar melepaskan *Free Token* baru ke media cinci
      $$\rho_{\max} = \frac{1}{1 + a' + 1}$$
    - Efisiensi anjlok drastis jika media cincin panjang ($a \ge 1$). Hanya efektif untuk jaringan cincin pendek berkecepatan rendah ($a \ll 1$). Digunakan pada standar awal **4 Mbps IEEE 802.5**.
 
-![[lgw2e-mac-token-efficiency-comparison.png]]
+![lgw2e-mac-token-efficiency-comparison.png](../attachments/lgw2e-mac-token-efficiency-comparison.png)
 *Gambar: Perbandingan efisiensi ketiga metode reinsertion token terhadap parameter $a$.*
 
 #### Definisi Latensi Cincin (Ring Latency, $\\tau'$):
@@ -649,7 +649,7 @@ Setiap stasiun ingin mentransmisikan 3 bit informasi. Pemetaan biner: Bit `0` $\
 - **Stasiun 3:** Data biner `0 0 1` $\to (-1, -1, +1)$
   - Sinyal Gelombang 3: `(+1,+1,-1,-1), (+1,+1,-1,-1), (-1,-1,+1,+1)`
 
-![[lgw2e-mac-cdma-three-users-transmission.png]]
+![lgw2e-mac-cdma-three-users-transmission.png](../attachments/lgw2e-mac-cdma-three-users-transmission.png)
 *Gambar: Sinyal transmisi tiga stasiun dan superposisi Sinyal Komposit (Sum Signal) pada media bersama.*
 
 #### C. Sinyal Komposit pada Media Bersama (*Sum Signal*):
@@ -665,7 +665,7 @@ $$\mathbf{S}_{\text{sum}} = \mathbf{(+1, -1, -1, -3)},\ \mathbf{(-1, +1, -3, -1)
 
 #### D. Proses Penerimaan & Demodulasi di Penerima Stasiun 2:
 
-![[lgw2e-mac-cdma-three-users-reception.png]]
+![lgw2e-mac-cdma-three-users-reception.png](../attachments/lgw2e-mac-cdma-three-users-reception.png)
 *Gambar: Proses korelasi dan integrasi di penerima Stasiun 2 untuk mengekstrak data biner asli.*
 
 Penerima stasiun 2 ingin membaca pesan yang ditujukan kepadanya. Penerima mengalikan sinyal komposit media dengan deret chip Stasiun 2: $\mathbf{c}_2 = (-1, +1, -1, +1)$ lalu mengintegrasikan (menjumlahkan) hasilnya:
@@ -715,7 +715,7 @@ Tabel berikut merangkum evolusi pemanfaatan teknik kanalisasi pada generasi komu
 | **GSM (2G Eropa/Global)** | **Hybrid FDMA / TDMA** | Carrier frekuensi selebar 200 kHz, dibagi menjadi 8 slot waktu per frame | $N = 3$ atau $N = 4$ (Teknik *slow frequency hopping*) | $\approx 6.61\text{ calls/cell/MHz}$ |
 | **IS-95 (2G/3G CDMA)** | **CDMA** (*Spread Spectrum*) | Lebar pita pembawa 1.25 MHz; semua sel menggunakan frekuensi yang sama persis | **$N = 1$** (Dapat digunakan ulang di **setiap sel** tanpa interferensi fatal berkat kode acak) | **$\approx 12 - 45\text{ calls/cell/MHz}$** (Paling efisien) |
 
-![[lgw2e-mac-gsm-tdma-frame.png]]
+![lgw2e-mac-gsm-tdma-frame.png](../attachments/lgw2e-mac-gsm-tdma-frame.png)
 *Gambar: Struktur frame hibrida FDMA/TDMA pada sistem GSM (Carrier 200 kHz dengan 8 slot waktu).*
 
 ---
@@ -786,7 +786,7 @@ Tinjau $M$ stasiun yang berbagi kapasitas media total $R$ bps. Laju kedatangan d
 
 Berbeda dengan kanalisasi, sistem penjadwalan dinamis (seperti Polling dan Token Ring) memiliki karakteristik delay yang jauh lebih superior dalam menangani trafik data:
 
-![[lgw2e-mac-delay-comparison-curves.png]]
+![lgw2e-mac-delay-comparison-curves.png](../attachments/lgw2e-mac-delay-comparison-curves.png)
 *Gambar: Kurva perbandingan Delay Antrean: Polling System & Token Ring vs Channelization.*
 
 1. **Pada Sistem Polling (Exhaustive Service):**
@@ -823,7 +823,7 @@ Pada model referensi OSI standar 7 lapis, Lapisan Data Link (*Layer 2*) menangan
 
 Oleh karena itu, IEEE memecah Lapisan Data Link menjadi **dua sub-lapisan (*sublayers*)**:
 
-![[lgw2e-mac-llc-mac-sublayers.png]]
+![lgw2e-mac-llc-mac-sublayers.png](../attachments/lgw2e-mac-llc-mac-sublayers.png)
 *Gambar: Pemisahan Data Link Layer menjadi sub-lapisan LLC (IEEE 802.2) dan sub-lapisan MAC.*
 
 1. **Logical Link Control (LLC - Standar IEEE 802.2):**
@@ -850,7 +850,7 @@ Standar IEEE 802.2 mendefinisikan tiga jenis model layanan link:
 
 ### 7.4 Struktur LLC PDU, SAP, & SNAP Header
 
-![[lgw2e-mac-llc-encapsulation.png]]
+![lgw2e-mac-llc-encapsulation.png](../attachments/lgw2e-mac-llc-encapsulation.png)
 *Gambar: Enkapsulasi paket IP ke dalam LLC PDU dan disematkan ke dalam frame MAC.*
 
 #### Service Access Point (SAP):
@@ -886,10 +886,10 @@ Ethernet diciptakan pada tahun 1973 oleh Robert Metcalfe dan timnya di Xerox PAR
 
 Terdapat perbedaan mendasar pada penafsiran field ke-5 antara standar IEEE 802.3 dan frame Ethernet II (DIX) yang digunakan di Internet saat ini:
 
-![[lgw2e-mac-ethernet-8023-frame.png]]
+![lgw2e-mac-ethernet-8023-frame.png](../attachments/lgw2e-mac-ethernet-8023-frame.png)
 *Gambar: Struktur Frame Ethernet standar IEEE 802.3.*
 
-![[lgw2e-mac-dix-ethernet-snap-frame.png]]
+![lgw2e-mac-dix-ethernet-snap-frame.png](../attachments/lgw2e-mac-dix-ethernet-snap-frame.png)
 *Gambar: Perbandingan format frame DIX Ethernet II dan IEEE 802.3 dengan enkapsulasi SNAP.*
 
 #### Rincian Komponen Frame:
@@ -947,7 +947,7 @@ $$\text{Payload Minimum} = 64\text{ Byte} - 18\text{ Byte} = \mathbf{46\text{ By
 
 ### 8.4 Media Fisik Klasik: 10BASE5, 10BASE2, & 10BASE-T
 
-![[lgw2e-mac-ethernet-physical-topologies.png]]
+![lgw2e-mac-ethernet-physical-topologies.png](../attachments/lgw2e-mac-ethernet-physical-topologies.png)
 *Gambar: Evolusi topologi fisik Ethernet: Bus kabel koaksial (10BASE5/2) vs Bintang Hub/Switch (10BASE-T).*
 
 Standar penamaan IEEE: `[Kecepatan][Tipe Sinyal][Panjang Maksimum atau Jenis Media]`
@@ -1031,14 +1031,14 @@ Dikembangkan oleh IBM pada tahun 1980-an dan distandarisasi oleh IEEE sebagai **
   - Untuk keandalan, stasiun-stasiun dihubungkan ke konsentrator kabel terpusat yang disebut **Multistation Access Unit (MSAU / MAU)** menggunakan kabel *Shielded Twisted Pair* (STP) IBM Tipe-1.
   - Di dalam MSAU terdapat relay elektromekanik yang ditenagai arus loop dari stasiun (*phantom current*). Jika kabel stasiun putus atau komputer dimatikan, relay otomatis menutup (*bypass switch*) dalam hitungan milidetik sehingga integritas loop cincin tetap terjaga.
 
-![[lgw2e-mac-token-ring-wiring-center.png]]
+![lgw2e-mac-token-ring-wiring-center.png](../attachments/lgw2e-mac-token-ring-wiring-center.png)
 *Gambar: Wiring Center (MSAU) menghubungkan workstation secara fisik bintang namun logis cincin.*
 
 ---
 
 ### 9.2 Format Frame Token & Frame Data IEEE 802.5
 
-![[lgw2e-mac-token-ring-frame-formats.png]]
+![lgw2e-mac-token-ring-frame-formats.png](../attachments/lgw2e-mac-token-ring-frame-formats.png)
 *Gambar: Format Frame Token (3 Byte) dan Frame Data IEEE 802.5.*
 
 1. **Frame Token Bebas (Hanya 3 Byte):**
@@ -1084,7 +1084,7 @@ FDDI dirilis oleh ANSI (standar X3T9.5) untuk menyediakan backbone jaringan area
 
 Salah satu keunggulan arsitektural terbesar FDDI adalah keandalan dan toleransi kerusakannya melalui sistem cincin ganda:
 
-![[lgw2e-mac-fddi-dual-ring-wrap.png]]
+![lgw2e-mac-fddi-dual-ring-wrap.png](../attachments/lgw2e-mac-fddi-dual-ring-wrap.png)
 *Gambar: Mekanisme isolasi kerusakan dan penyambungan cincin otomatis (Self-Healing Wrap) pada FDDI.*
 
 1. **Struktur Cincin Ganda:**
@@ -1138,7 +1138,7 @@ Komunikasi data melalui gelombang radio nirkabel menghadapi tantangan fisik yang
 
 Dua fenomena fisik yang menjadi sumber masalah utama pada jaringan nirkabel:
 
-![[lgw2e-mac-hidden-exposed-terminal.png]]
+![lgw2e-mac-hidden-exposed-terminal.png](../attachments/lgw2e-mac-hidden-exposed-terminal.png)
 *Gambar: (a) Masalah Terminal Tersembunyi (Hidden Terminal) dan (b) Masalah Terminal Terekspos (Exposed Terminal).*
 
 #### A. Masalah Terminal Tersembunyi (*Hidden Terminal Problem*):
@@ -1162,7 +1162,7 @@ Dua fenomena fisik yang menjadi sumber masalah utama pada jaringan nirkabel:
 
 Untuk mengatasi masalah *Hidden Terminal*, standar IEEE 802.11 menyediakan mekanisme jabat tangan 4-arah (*four-way handshake*) menggunakan frame kendali pendek:
 
-![[lgw2e-mac-80211-rts-cts-concept.png]]
+![lgw2e-mac-80211-rts-cts-concept.png](../attachments/lgw2e-mac-80211-rts-cts-concept.png)
 *Gambar: Alur jabat tangan RTS/CTS untuk mengamankan kanal transmisi dari stasiun tersembunyi.*
 
 1. **RTS (Request to Send):** Stasiun pengirim ($A$) memancarkan frame kendali RTS berukuran 20 Byte ke stasiun penerima ($B$). Di dalam header RTS terdapat field **Duration** yang menyatakan berapa mikrodetik kanal akan dipesan untuk menyelesaikan seluruh siklus transmisi (RTS + CTS + Data + ACK).
@@ -1192,7 +1192,7 @@ Station A (Sender)             Station B (Receiver)          Station C (Hidden N
 
 ### 10.4 Arsitektur Komponen 802.11: BSS, ESS, AP, & DS
 
-![[lgw2e-mac-80211-bss-ess-architecture.png]]
+![lgw2e-mac-80211-bss-ess-architecture.png](../attachments/lgw2e-mac-80211-bss-ess-architecture.png)
 *Gambar: Arsitektur topologi IEEE 802.11: BSS Independen, BSS Infrastruktur, Access Point, dan Extended Service Set (ESS).*
 
 Standar IEEE 802.11 mendefinisikan blok-blok pembangun jaringan:
@@ -1237,7 +1237,7 @@ Sub-lapisan MAC 802.11 menyediakan dua mode layanan akses:
 
 Untuk menciptakan tingkatan prioritas akses yang berbeda tanpa memerlukan kontrol kabel terpusat, IEEE 802.11 mendefinisikan jeda waktu hening yang wajib ditaati stasiun setelah kanal terdeteksi kosong, yang disebut **Interframe Spacing (IFS)**:
 
-![[lgw2e-mac-80211-dcf-timing-nav.png]]
+![lgw2e-mac-80211-dcf-timing-nav.png](../attachments/lgw2e-mac-80211-dcf-timing-nav.png)
 *Gambar: Diferensiasi tingkat prioritas melalui durasi Interframe Spacing (IFS) dan alur transmisi DCF.*
 
 Tingkatan durasi IFS (diurutkan dari yang paling singkat ke yang paling lama):
@@ -1279,7 +1279,7 @@ Jika sebuah stasiun memiliki frame untuk dikirim saat media radio terdeteksi sib
 
 ### 10.9 Struktur Frame MAC 802.11 & Resolusi 4 MAC Address
 
-![[lgw2e-mac-80211-frame-format-addresses.png]]
+![lgw2e-mac-80211-frame-format-addresses.png](../attachments/lgw2e-mac-80211-frame-format-addresses.png)
 *Gambar: Format Header Frame MAC IEEE 802.11 (30 Byte) dan field-field kontrolnya.*
 
 Header MAC IEEE 802.11 berukuran total **30 Byte**, terdiri dari:
@@ -1351,7 +1351,7 @@ Standar **IEEE 802.1D** mendefinisikan jembatan transparan (*Transparent Bridge*
 
 Bridge membangun tabel alamat (*Forwarding Database / Filtering Database*) secara otomatis dan mandiri tanpa konfigurasi manual menggunakan **Algoritma Pembelajaran Adaptif (*Backward / Adaptive Learning Algorithm*)**:
 
-![[lgw2e-mac-bridge-learning-forwarding.png]]
+![lgw2e-mac-bridge-learning-forwarding.png](../attachments/lgw2e-mac-bridge-learning-forwarding.png)
 *Gambar: Cara kerja Transparent Bridge mempelajari lokasi MAC address melalui port datangnya frame.*
 
 1. **Mekanisme Pembelajaran (*Learning*):**
@@ -1415,7 +1415,7 @@ Untuk mencegah terjadinya loop sambil tetap mempertahankan keuntungan redundansi
 
 STP secara dinamis memutus siklus logis dengan mengubah topologi graf jaringan yang memiliki loop menjadi sebuah **Pohon Rentang (*Spanning Tree*) bebas siklus**, di mana port-port cadangan dinonaktifkan sementara (*blocked*).
 
-![[lgw2e-mac-spanning-tree-topology.png]]
+![lgw2e-mac-spanning-tree-topology.png](../attachments/lgw2e-mac-spanning-tree-topology.png)
 *Gambar: Transformasi topologi berulang menjadi pohon bebas loop menggunakan Spanning Tree Protocol (IEEE 802.1D).*
 
 #### Empat Langkah Inti Algoritma Spanning Tree:
@@ -1458,7 +1458,7 @@ Jika stasiun pengirim belum mengetahui rute ke tujuan, stasiun menjalankan penca
 2. **All-Routes Broadcast:** Stasiun tujuan membalas dengan memancarkan frame penjelajah *All-Routes Broadcast*. Frame ini digandakan oleh setiap bridge melintasi seluruh cabang jalur yang mungkin di jaringan.
 3. Seluruh variasi rute yang berbeda akan tiba kembali di stasiun pengirim. Stasiun pengirim mencatat semua rute, mengevaluasi mana yang paling cepat (jumlah hop terpendek atau waktu tunda terkecil), lalu menggunakan rute terbaik tersebut untuk seluruh sesi komunikasi selanjutnya.
 
-![[lgw2e-mac-source-routing-bridges.png]]
+![lgw2e-mac-source-routing-bridges.png](../attachments/lgw2e-mac-source-routing-bridges.png)
 *Gambar: Penemuan rute pada Source Routing Bridges melintasi interkoneksi Token Ring.*
 
 ---
@@ -1473,7 +1473,7 @@ Pada jaringan LAN tradisional, batas domain broadcast (*Broadcast Domain*) diten
 - Komputer-komputer yang berada di dalam satu VLAN yang sama dapat berkomunikasi secara langsung pada Layer 2, meskipun berada di lantai yang berbeda atau switch yang berbeda.
 - Komunikasi antar-VLAN yang berbeda **wajib melintasi perangkat Layer 3 (Router atau Layer 3 Switch)**.
 
-![[lgw2e-mac-vlan-physical-logical.png]]
+![lgw2e-mac-vlan-physical-logical.png](../attachments/lgw2e-mac-vlan-physical-logical.png)
 *Gambar: Partisi Fisik vs Partisi Logis Virtual LAN (VLAN) di dalam gedung bertingkat.*
 
 ---

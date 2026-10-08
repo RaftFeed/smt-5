@@ -1,4 +1,4 @@
----
+﻿---
 title: "Week 7: Securing Information Systems"
 tags:
   - security
@@ -63,7 +63,7 @@ type: study-note
 
 ### 1.1 Mengapa Sistem Informasi Begitu Rentan? (Arsitektur Vektor Serangan Berlapis)
 
-![[mis16e-fig-8-1-security-challenges-vulnerabilities.png]]
+![mis16e-fig-8-1-security-challenges-vulnerabilities.png](../attachments/mis16e-fig-8-1-security-challenges-vulnerabilities.png)
 *Gambar 7.1: Arsitektur Kerentanan Sistem Multi-Tier dan Titik Ancaman Siber*
 
 Ketika data dalam jumlah besar dipindahkan dan disimpan dalam bentuk elektronik, data tersebut terbuka terhadap beragam ancaman pada setiap lapisan arsitektur komputasi:
@@ -87,7 +87,7 @@ Ketika data dalam jumlah besar dipindahkan dan disimpan dalam bentuk elektronik,
 
 ### 1.2 Kerentanan Jaringan Nirkabel (Wireless Vulnerabilities)
 
-![[mis16e-fig-8-2-wifi-security-challenges.png]]
+![mis16e-fig-8-2-wifi-security-challenges.png](../attachments/mis16e-fig-8-2-wifi-security-challenges.png)
 *Gambar 7.2: Kerentanan Keamanan Jaringan Nirkabel Wi-Fi dan Penetrasi War Driving*
 
 - Gelombang radio nirkabel menyebar ke segala arah tanpa dibatasi dinding fisik kantor.
@@ -195,7 +195,7 @@ Kontrol sistem informasi diklasifikasikan ke dalam dua pilar utama:
 > Penilaian risiko mengevaluasi potensi ancaman dan menghitung estimasi kerugian tahunan yang diharapkan:
 > $$	ext{Expected Annual Loss (EAL)} = 	ext{Probabilitas Risiko (\%) } 	imes 	ext{Estimasi Kerugian Per Kejadian (\$)}$$
 
-![[mis16e-fig-8-4-auditor-listing-control-weaknesses.png]]
+![mis16e-fig-8-4-auditor-listing-control-weaknesses.png](../attachments/mis16e-fig-8-4-auditor-listing-control-weaknesses.png)
 *Gambar 7.3: Lembar Evaluasi Auditor Mengenai Kelemahan Kontrol dan Estimasi Risiko*
 
 #### Contoh Kasus Analisis Risiko Mercer Paints:
@@ -236,7 +236,7 @@ Otentikasi membuktikan kebenaran identitas pengguna melalui tiga faktor dasar:
 ### 4.2 Firewall, Intrusion Detection Systems (IDS/IPS), dan UTM
 1. **Firewall:** Gerbang keamanan yang menyaring lalu lintas data antara jaringan internal perusahaan dan internet luar:
 
-![[mis16e-fig-8-3-corporate-firewalls.png]]
+![mis16e-fig-8-3-corporate-firewalls.png](../attachments/mis16e-fig-8-3-corporate-firewalls.png)
 *Gambar 7.4: Arsitektur Firewall Korporat Berlapis Melindungi Jaringan Internal*
    - *Packet Filtering:* Memeriksa header paket IP (alamat asal, tujuan, nomor port) dan menolak paket mencurigakan.
    - *Stateful Inspection:* Memantau koneksi aktif untuk memastikan paket data merupakan bagian dari percakapan yang sah.
@@ -252,7 +252,7 @@ Otentikasi membuktikan kebenaran identitas pengguna melalui tiga faktor dasar:
 
 ### 4.4 Kriptografi dan Public Key Infrastructure (PKI)
 
-![[mis16e-fig-8-5-public-key-encryption-pki.png]]
+![mis16e-fig-8-5-public-key-encryption-pki.png](../attachments/mis16e-fig-8-5-public-key-encryption-pki.png)
 *Gambar 7.5: Mekanisme Enkripsi Kunci Publik (Asimetris) dengan Sepasang Kunci*
 
 ```
@@ -275,7 +275,7 @@ Otentikasi membuktikan kebenaran identitas pengguna melalui tiga faktor dasar:
 - **SSL (*Secure Sockets Layer*) & TLS (*Transport Layer Security*):** Protokol enkripsi yang mengamankan lalu lintas data antara browser web pengguna dan server web (ditandai dengan protokol `https://` dan ikon gembok pada browser).
 - **Sertifikat Digital (*Digital Certificates*):** Berkas data identitas digital yang dikeluarkan oleh lembaga pihak ketiga tepercaya
 
-![[mis16e-fig-8-6-digital-certificates-ca.png]]
+![mis16e-fig-8-6-digital-certificates-ca.png](../attachments/mis16e-fig-8-6-digital-certificates-ca.png)
 *Gambar 7.6: Arsitektur Otoritas Sertifikasi (Certificate Authority - CA) Menerbitkan Sertifikat Digital* (**Certificate Authority - CA**, seperti DigiCert atau Let's Encrypt) untuk memverifikasi keaslian identitas server web dan mencegah serangan *Man-in-the-Middle*.
 
 ```
