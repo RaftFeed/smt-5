@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Week 1: Information Systems in Global Business Today"
 tags:
   - information-systems

@@ -27,6 +27,9 @@ type: moc
 > 5. [[Week 5 - Foundations of Business Intelligence - Databases and Information Management|Week 5: Foundations of Business Intelligence - Databases and Information Management]] — RDBMS, SQL, normalisasi, NoSQL, big data, data warehouse, OLAP, dan data mining.
 > 6. [[Week 6 - Telecommunications, the Internet, and Wireless Technology|Week 6: Telecommunications, the Internet, and Wireless Technology]] — Jaringan data, TCP/IP, DNS, arsitektur internet, 4G/5G, Wi-Fi, RFID, dan WSN.
 > 7. [[Week 7 - Securing Information Systems|Week 7: Securing Information Systems]] — Vektor ancaman siber, malware, kontrol umum vs aplikasi, manajemen risiko, DRP/BCP, kriptografi PKI, dan audit SI.
+>
+> **Rangkuman Persiapan Ujian:**
+> - [[Rangkuman UTS - Sistem Informasi|Rangkuman UTS: Materi Bab 1–7]] — Ringkasan komprehensif verbatim seluruh bab pra-UTS, tabel perbandingan, dan pembeda istilah yang sering menjebak.
 
 ---
 
@@ -41,6 +44,7 @@ type: moc
 | **W5** | **[[Week 5 - Foundations of Business Intelligence - Databases and Information Management\|Foundations of Business Intelligence - Databases and Information Management]]** | Laudon Ch. 6 | Tradisional vs Database, RDBMS (Tuples, Keys, SELECT/PROJECT/JOIN), Normalisasi (1NF-3NF), NoSQL & Blockchain, 3V Big Data, Data Warehouse/Mart, Hadoop, OLAP Cube, Data Mining. *Kasus: Charlotte Hornets, Kraft Heinz*. | ✅ Selesai |
 | **W6** | **[[Week 6 - Telecommunications, the Internet, and Wireless Technology\|Telecommunications, the Internet, and Wireless Technology]]** | Laudon Ch. 7 | Komponen Jaringan, Packet Switching, Protokol TCP/IP (4 Layer), LAN/CAN/MAN/WAN, IPv4 vs IPv6, DNS Hierarchy, VoIP & VPN, Web 2.0 vs 3.0, Seluler (4G/5G), Bluetooth, Wi-Fi, RFID & WSN. *Kasus: Walmart RFID Supply Chain*. | ✅ Selesai |
 | **W7** | **[[Week 7 - Securing Information Systems\|Securing Information Systems]]** | Laudon Ch. 8 | Vektor Kerentanan Berlapis, Malware (Worms, Trojans, Ransomware), DDoS & Botnets, Zero-Day, General vs Application Controls, Expected Annual Loss (EAL), DRP & BCP, Firewall, PKI (Symmetric vs Asymmetric), SSL/TLS, Audit SI. *Kasus: Ransomware Sodinokibi*. | ✅ Selesai |
+| **UTS** | **[[Rangkuman UTS - Sistem Informasi\|Rangkuman UTS (Bab 1–7)]]** | Laudon Ch. 1–7 / Slide Bab 1–7 | Rangkuman lengkap seluruh materi pra-UTS, tabel perbandingan enterprise apps, strategi Porter, prinsip etika FIP, arsitektur IT, DBMS, jaringan, dan 22 pasang istilah penjebak. | ✅ Selesai |
 
 ---
 
