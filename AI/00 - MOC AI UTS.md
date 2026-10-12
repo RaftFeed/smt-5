@@ -133,4 +133,11 @@ Gunakan daftar centang interaktif ini untuk memantau progres belajarmu:
 - [ ] **Week 07**: Mampu melakukan unifikasi ekspresi predikat dan memahami Skolemization.
 
 ---
+
+## 📝 Arsip Soal & Pembahasan UTS Resmi
+
+> [!example] Kumpulan Soal UTS Riil
+> - 📄 [[Soal dan Pembahasan UTS AI Genap 2025-2026|Soal & Pembahasan Lengkap UTS AI Genap 2025/2026 (MKD & KPR)]] — Memuat pembahasan lengkap 4 kuadran AI, PEAS drone, tabel komparasi Search (DFS, BFS, UCS, Greedy, A*), CSP penjadwalan presentasi, Wumpus World propositional logic model checking, dan translasi First Order Logic.
+
+---
 *Semoga sukses menghadapi UTS Kecerdasan Buatan! Buka catatan pertama:* [[Week 01 - Pengantar Kecerdasan Buatan (Intro to AI)|Week 01 - Pengantar AI ➔]]

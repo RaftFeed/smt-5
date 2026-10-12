@@ -10,7 +10,7 @@ created: 2026-10-10
 week: 2
 source: "Kuliah AI - Pertemun 2.pdf, Russell & Norvig Chapter 2"
 ---
-
+	 
 # Week 02 - Agen Cerdas dan Lingkungan (Intelligent Agents)
 
 > [!summary] Navigasi Catatan
