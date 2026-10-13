@@ -27,7 +27,7 @@ source: "07 Sorting 2526.pdf"
 
 ![aa_w7_review_pengurutan.png](../attachments/aa_w7_review_pengurutan.png)
 
-Diberikan array $A[1 \dots n]$, susun ulang elemen sedemikian rupa sehingga $A[1] \le A[2] \le \dots \le A[n]$.
+Diberikan array A[1 ... n], susun ulang elemen sedemikian rupa sehingga A[1] ≤ A[2] ≤ ... ≤ A[n].
 
 ```mermaid
 graph TD
@@ -44,8 +44,8 @@ graph TD
 ### Kriteria Pemilihan Algoritme Pengurutan:
 1. **Kompleksitas Waktu (*Time Complexity*)**: Best, Average, dan Worst Case.
 2. **Kebutuhan Memori Tambahan (*In-Place vs Out-of-Place*)**:
-   - *In-Place*: Hanya menggunakan memori tambahan konstan $O(1)$ di luar array input (atau $O(\log n)$ call stack). Contoh: Insertion Sort, Quick Sort.
-   - *Out-of-Place*: Membutuhkan alokasi array pembantu sebesar $\Omega(n)$. Contoh: Merge Sort, Counting Sort.
+   - *In-Place*: Hanya menggunakan memori tambahan konstan O(1) di luar array input (atau O(\log n) call stack). Contoh: Insertion Sort, Quick Sort.
+   - *Out-of-Place*: Membutuhkan alokasi array pembantu sebesar Ω(n). Contoh: Merge Sort, Counting Sort.
 3. **Stabilitas (*Stability*)**:
    - Sebuah algoritme dikatakan **Stabil (*Stable*)** jika elemen-elemen yang memiliki kunci nilai sama mempertahankan urutan posisi relatifnya sebelum dan setelah pengurutan.
    - *Contoh*: Jika input berisi data `[(2, mutia), (3, faqih), (2, insan)]`, algoritme stabil menjamin `(2, mutia)` selalu muncul sebelum `(2, insan)`.
@@ -84,17 +84,17 @@ def insertion_sort(A, n):
 
 ![aa_w7_best_case_stabilitas.png](../attachments/aa_w7_best_case_stabilitas.png)
 
-- **Best Case: $O(n)$**:
-  - Terjadi ketika **array sudah terurut menaik** ($[1, 2, 3, 4, 5]$).
+- **Best Case: O(n)**:
+  - Terjadi ketika **array sudah terurut menaik** ([1, 2, 3, 4, 5]).
   - Loop `while` langsung gagal pada perbandingan pertama karena `A[i] > key` bernilai false.
-  - Jumlah shifting $= 0$. Total operasi $= (n - 1) = \Theta(n)$.
-- **Worst Case: $O(n^2)$**:
-  - Terjadi ketika **array terurut terbalik** ($[5, 4, 3, 2, 1]$).
-  - Setiap elemen ke-$j$ harus dibandingkan dan digeser sebanyak $j$ kali.
-  - Total langkah: $\sum_{j=1}^{n-1} j = \frac{n(n - 1)}{2} = \Theta(n^2)$.
-- **Average Case: $O(n^2)$**:
-  - Rata-rata elemen harus digeser sebanyak $\frac{j}{2}$ kali $\implies \Theta(n^2)$.
-- **Karakteristik**: In-place ($O(1)$ space), **Stabil** (tidak menukar jika nilai identik).
+  - Jumlah shifting = 0. Total operasi = (n - 1) = Θ(n).
+- **Worst Case: O(n²)**:
+  - Terjadi ketika **array terurut terbalik** ([5, 4, 3, 2, 1]).
+  - Setiap elemen ke-j harus dibandingkan dan digeser sebanyak j kali.
+  - Total langkah: ∑_{j=1}^{n-1} j = \frac{n(n - 1)}{2} = Θ(n²).
+- **Average Case: O(n²)**:
+  - Rata-rata elemen harus digeser sebanyak \frac{j}{2} kali → Θ(n²).
+- **Karakteristik**: In-place (O(1) space), **Stabil** (tidak menukar jika nilai identik).
 
 ---
 
@@ -106,7 +106,7 @@ def insertion_sort(A, n):
 
 ![aa_w7_divide_murah.png](../attachments/aa_w7_divide_murah.png)
 
-1. **Divide**: Bagi array menjadi dua subarray berukuran $\frac{n}{2}$ di titik tengah. Operasi ini murah: **$O(1)$** (hanya manipulasi indeks).
+1. **Divide**: Bagi array menjadi dua subarray berukuran \frac{n}{2} di titik tengah. Operasi ini murah: **O(1)** (hanya manipulasi indeks).
 2. **Conquer**: Urutkan kedua subarray secara rekursif.
 3. **Combine (Merge)**: Gabungkan kedua subarray yang sudah terurut menjadi satu array terurut utuh.
 
@@ -115,7 +115,7 @@ def insertion_sort(A, n):
 ![aa_w7_merge_operasi_mahal.png](../attachments/aa_w7_merge_operasi_mahal.png)
 
 > [!important] Operasi Merge adalah Komputasi Utama
-> Menggabungkan dua subarray terurut berukuran total $n$ memerlukan paling banyak $n - 1$ perbandingan. Setiap perbandingan menempatkan minimal satu elemen ke array hasil. Maka operasi merge memerlukan waktu linear **$O(n)$**.
+> Menggabungkan dua subarray terurut berukuran total n memerlukan paling banyak n - 1 perbandingan. Setiap perbandingan menempatkan minimal satu elemen ke array hasil. Maka operasi merge memerlukan waktu linear **O(n)**.
 
 ```python
 def merge_sort(A):
@@ -145,17 +145,17 @@ def merge(left, right):
 ```
 
 ### B. Analisis Relasi Rekurensi
-$$T(n) = 2T\left(\frac{n}{2}\right) + O(n)$$
-Berdasarkan Teorema Master ($a = 2, b = 2, f(n) = n \implies n^{\log_2 2} = n$, Kasus 2):
-$$T(n) = \Theta(n \log n)$$
+$T(n) = 2T≤ft(\frac{n}{2}\right) + O(n)$
+Berdasarkan Teorema Master (a = 2, b = 2, f(n) = n → n^{\log₂ 2} = n, Kasus 2):
+$T(n) = Θ(n \log n)$
 
 ![aa_w7_merge_sort_konsisten_kasus.png](../attachments/aa_w7_merge_sort_konsisten_kasus.png)
 
-### C. Mengapa Merge Sort Bernilai Konsisten $\Theta(n \log n)$ di Semua Kasus?
-- **Struktur pembagian selalu sama**: Mau array sudah terurut, terbalik, atau acak, pohon rekursi selalu memiliki kedalaman $\log_2 n$.
-- **Proses merge selalu linear**: Setiap level pohon rekursi memproses total $n$ elemen pada tahap merge.
-- Total biaya $= \log_2 n \text{ level} \times O(n) \text{ per level} = \Theta(n \log n)$ pada **Best, Worst, dan Average Case**.
-- **Kelemahan**: Membutuhkan alokasi array tambahan sebesar **$O(n)$** (*not in-place*).
+### C. Mengapa Merge Sort Bernilai Konsisten Θ(n \log n) di Semua Kasus?
+- **Struktur pembagian selalu sama**: Mau array sudah terurut, terbalik, atau acak, pohon rekursi selalu memiliki kedalaman \log₂ n.
+- **Proses merge selalu linear**: Setiap level pohon rekursi memproses total n elemen pada tahap merge.
+- Total biaya = \log₂ n  level × O(n)  per level = Θ(n \log n) pada **Best, Worst, dan Average Case**.
+- **Kelemahan**: Membutuhkan alokasi array tambahan sebesar **O(n)** (*not in-place*).
 
 ---
 
@@ -166,7 +166,7 @@ $$T(n) = \Theta(n \log n)$$
 ![aa_w7_quick_sort_ide.png](../attachments/aa_w7_quick_sort_ide.png)
 
 1. Pilih sebuah elemen sebagai **Pivot** (misal elemen pertama, terakhir, tengah, atau acak).
-2. **Partisi**: Atur ulang array sedemikian rupa sehingga semua elemen yang $\le \text{pivot}$ berada di sebelah kiri, dan elemen $\ge \text{pivot}$ berada di sebelah kanan. Biaya partisi $= O(n)$.
+2. **Partisi**: Atur ulang array sedemikian rupa sehingga semua elemen yang ≤ pivot berada di sebelah kiri, dan elemen ≥ pivot berada di sebelah kanan. Biaya partisi = O(n).
 3. Rekursif jalankan Quick Sort pada sisi kiri dan sisi kanan pivot.
 
 ```python
@@ -191,23 +191,23 @@ def partition(A, low, high):
 
 ![aa_w7_quick_sort_relasi_rekursi.png](../attachments/aa_w7_quick_sort_relasi_rekursi.png)
 
-Jika pivot jatuh pada posisi ke-$i$:
-$$T(n) = T(i) + T(n - i - 1) + c n$$
+Jika pivot jatuh pada posisi ke-i:
+$T(n) = T(i) + T(n - i - 1) + c n$
 
 ![aa_w7_quick_sort_unbalanced.png](../attachments/aa_w7_quick_sort_unbalanced.png)
 
 1. **Kasus Terbaik (*Best Case*)**:
-   - Pivot selalu tepat membagi array menjadi dua bagian sama besar ($i \approx \frac{n}{2}$).
-   - $T(n) = 2T(n/2) + cn \implies \Theta(n \log n)$.
+   - Pivot selalu tepat membagi array menjadi dua bagian sama besar (i ≈ \frac{n}{2}).
+   - T(n) = 2T(n/2) + cn → Θ(n \log n).
 2. **Kasus Terburuk (*Worst Case*)**:
-   - Terjadi ketika partisi **sangat tidak seimbang** ($i = 0$ atau $i = n - 1$).
+   - Terjadi ketika partisi **sangat tidak seimbang** (i = 0 atau i = n - 1).
    - Sering terjadi jika array **sudah terurut atau terbalik** dan pivot dipilih di ujung array.
-   - Relasi: $T(n) = T(n - 1) + T(0) + cn = T(n - 1) + cn$.
-   - Penjumlahan deret: $cn + c(n - 1) + c(n - 2) + \dots + c = c \frac{n(n + 1)}{2} \implies \Theta(n^2)$.
+   - Relasi: T(n) = T(n - 1) + T(0) + cn = T(n - 1) + cn.
+   - Penjumlahan deret: cn + c(n - 1) + c(n - 2) + ... + c = c \frac{n(n + 1)}{2} → Θ(n²).
 3. **Kasus Rata-Rata (*Average Case*)**:
-   - Ekspektasi pembagian menghasilkan rasio seimbang (seperti $9:1$ atau $1:1$).
-   - Menghasilkan kompleksitas **$\Theta(n \log n)$**.
-- **Karakteristik**: In-place ($O(\log n)$ stack space), **Tidak Stabil** (penukaran partisi dapat melompati elemen identik).
+   - Ekspektasi pembagian menghasilkan rasio seimbang (seperti 9:1 atau 1:1).
+   - Menghasilkan kompleksitas **Θ(n \log n)**.
+- **Karakteristik**: In-place (O(\log n) stack space), **Tidak Stabil** (penukaran partisi dapat melompati elemen identik).
 
 ---
 
@@ -218,17 +218,17 @@ $$T(n) = T(i) + T(n - i - 1) + c n$$
 ![aa_w7_counting_sort_bins.png](../attachments/aa_w7_counting_sort_bins.png)
 
 ### A. Konsep dan Syarat Penggunaan
-Counting Sort tidak menggunakan perbandingan ($<$ atau $>$), melainkan menghitung **frekuensi kemunculan setiap nilai kunci diskret**.
+Counting Sort tidak menggunakan perbandingan (< atau >), melainkan menghitung **frekuensi kemunculan setiap nilai kunci diskret**.
 
 > [!important] Syarat Mutlak Counting Sort
 > - Elemen harus berupa **bilangan bulat diskret** (*integers*).
-> - Jangkauan nilai kunci $k = \max - \min + 1$ harus diketahui dan berhingga.
+> - Jangkauan nilai kunci k = \max - \min + 1 harus diketahui dan berhingga.
 
 ### B. Langkah Algoritme (4 Fase)
-1. **Inisialisasi Array Hitung**: Buat array `count` berukuran $k$ dengan nilai awal $0$.
-2. **Frekuensi Elemen**: Lakukan scanning array input $A$, tambahkan `count[A[i]]++` $\implies O(n)$.
-3. **Prefix Sum (Akumulasi)**: Ubah `count[i] = count[i] + count[i - 1]` untuk menyimpan posisi akhir setiap elemen $\implies O(k)$.
-4. **Penempatan ke Array Output**: Lakukan iterasi mundur dari indeks $n-1$ ke $0$ pada array input, letakkan elemen ke `output[count[A[i]] - 1]`, lalu kurangi `count[A[i]]--` $\implies O(n)$.
+1. **Inisialisasi Array Hitung**: Buat array `count` berukuran k dengan nilai awal 0.
+2. **Frekuensi Elemen**: Lakukan scanning array input A, tambahkan `count[A[i]]++` → O(n).
+3. **Prefix Sum (Akumulasi)**: Ubah `count[i] = count[i] + count[i - 1]` untuk menyimpan posisi akhir setiap elemen → O(k).
+4. **Penempatan ke Array Output**: Lakukan iterasi mundur dari indeks n-1 ke 0 pada array input, letakkan elemen ke `output[count[A[i]] - 1]`, lalu kurangi `count[A[i]]--` → O(n).
    *(Iterasi mundur menjamin **Kestabilan Algoritme**).*
 
 ![aa_w7_counting_sort_prefix_sum.png](../attachments/aa_w7_counting_sort_prefix_sum.png)
@@ -265,12 +265,12 @@ def counting_sort(A, n):
 
 ![aa_w7_counting_sort_kompleksitas.png](../attachments/aa_w7_counting_sort_kompleksitas.png)
 
-- **Waktu**: $O(n) + O(k) + O(n) = \Theta(n + k)$.
-- **Memori Tambahan**: $O(k)$ untuk array `count` dan $O(n)$ untuk array `output` $\implies \Theta(n + k)$.
+- **Waktu**: O(n) + O(k) + O(n) = Θ(n + k).
+- **Memori Tambahan**: O(k) untuk array `count` dan O(n) untuk array `output` → Θ(n + k).
 - **Kapan Efisien?**:
-  - Jika $k = O(n)$ (misal menyortir $1.000.000$ nilai usia manusia antara $0$ s.d. $120$), waktu eksekusi adalah **Linear $\Theta(n)$**! Jauh lebih cepat daripada Merge Sort / Quick Sort.
+  - Jika k = O(n) (misal menyortir 1.000.000 nilai usia manusia antara 0 s.d. 120), waktu eksekusi adalah **Linear Θ(n)**! Jauh lebih cepat daripada Merge Sort / Quick Sort.
 - **Kapan Gagal / Tidak Efisien?**:
-  - Jika $k \gg n$ (misal hanya menyortir $100$ data dengan nilai kunci mencapai $10^9$), alokasi memori $10^9$ akan menyebabkan *Memory Overflow* dan pemborosan waktu loop prefix sum.
+  - Jika k \gg n (misal hanya menyortir 100 data dengan nilai kunci mencapai 10^9), alokasi memori 10^9 akan menyebabkan *Memory Overflow* dan pemborosan waktu loop prefix sum.
 
 ---
 
@@ -278,18 +278,18 @@ def counting_sort(A, n):
 
 | Algoritme | Best Case | Average Case | Worst Case | Space Complexity | Stabil? | In-Place? | Catatan Utama |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
-| **Insertion Sort** | $\Theta(n)$ | $\Theta(n^2)$ | $\Theta(n^2)$ | $O(1)$ | **Ya** | **Ya** | Terbaik untuk data berukuran sangat kecil atau nyaris terurut |
-| **Selection Sort** | $\Theta(n^2)$ | $\Theta(n^2)$ | $\Theta(n^2)$ | $O(1)$ | Tidak | **Ya** | Minimal dalam jumlah penukaran (maksimal $n$ swap) |
-| **Bubble Sort** | $\Theta(n)$ (dg flag) | $\Theta(n^2)$ | $\Theta(n^2)$ | $O(1)$ | **Ya** | **Ya** | Mudah dipahami, tidak efisien di dunia industri |
-| **Merge Sort** | $\Theta(n \log n)$ | $\Theta(n \log n)$ | $\Theta(n \log n)$ | $O(n)$ | **Ya** | Tidak | Waktu stabil terjamin, memori boros, standar untuk Linked List |
-| **Quick Sort** | $\Theta(n \log n)$ | $\Theta(n \log n)$ | $\Theta(n^2)$ | $O(\log n)$ | Tidak | **Ya** | Rata-rata tercepat di CPU (*cache locality* unggul) |
-| **Counting Sort** | $\Theta(n + k)$ | $\Theta(n + k)$ | $\Theta(n + k)$ | $O(n + k)$ | **Ya** | Tidak | Non-comparison linear, syarat kunci diskret terbatas |
+| **Insertion Sort** | Θ(n) | Θ(n²) | Θ(n²) | O(1) | **Ya** | **Ya** | Terbaik untuk data berukuran sangat kecil atau nyaris terurut |
+| **Selection Sort** | Θ(n²) | Θ(n²) | Θ(n²) | O(1) | Tidak | **Ya** | Minimal dalam jumlah penukaran (maksimal n swap) |
+| **Bubble Sort** | Θ(n) (dg flag) | Θ(n²) | Θ(n²) | O(1) | **Ya** | **Ya** | Mudah dipahami, tidak efisien di dunia industri |
+| **Merge Sort** | Θ(n \log n) | Θ(n \log n) | Θ(n \log n) | O(n) | **Ya** | Tidak | Waktu stabil terjamin, memori boros, standar untuk Linked List |
+| **Quick Sort** | Θ(n \log n) | Θ(n \log n) | Θ(n²) | O(\log n) | Tidak | **Ya** | Rata-rata tercepat di CPU (*cache locality* unggul) |
+| **Counting Sort** | Θ(n + k) | Θ(n + k) | Θ(n + k) | O(n + k) | **Ya** | Tidak | Non-comparison linear, syarat kunci diskret terbatas |
 
 ---
 
 ## 🎯 Rangkuman Cepat untuk Ujian (ADHD Takeaways)
-- Comparison sort lower bound teoritis adalah $\Omega(n \log n)$.
-- Merge Sort konsisten $O(n \log n)$ di semua kondisi karena pohon selalu dibagi 2 dan merge selalu $O(n)$, namun butuh memori tambahan $O(n)$.
-- Quick Sort worst-case $O(n^2)$ jika pivot ekstrem pada data terurut/terbalik.
-- Counting Sort mencapai $O(n + k)$ tanpa perbandingan; stabil berkat backward iteration.
+- Comparison sort lower bound teoritis adalah Ω(n \log n).
+- Merge Sort konsisten O(n \log n) di semua kondisi karena pohon selalu dibagi 2 dan merge selalu O(n), namun butuh memori tambahan O(n).
+- Quick Sort worst-case O(n²) jika pivot ekstrem pada data terurut/terbalik.
+- Counting Sort mencapai O(n + k) tanpa perbandingan; stabil berkat backward iteration.
 - Stabilitas: urutan elemen bernilai sama tidak berubah sebelum dan sesudah sorting (Insertion, Merge, Counting = Stabil; Quick = Tidak Stabil).

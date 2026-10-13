@@ -26,7 +26,7 @@ source: "Analysis of Algorithms 3_ganjil 2024-2025_SENT.pptx.pdf"
 
 ![aa_w3_tiga_kasus_definisi.png](../attachments/aa_w3_tiga_kasus_definisi.png)
 
-Waktu eksekusi suatu algoritme tidak hanya bergantung pada ukuran input $n$, tetapi juga pada **konfigurasi/susunan data input**. Oleh karena itu, dianalisis tiga skenario:
+Waktu eksekusi suatu algoritme tidak hanya bergantung pada ukuran input n, tetapi juga pada **konfigurasi/susunan data input**. Oleh karena itu, dianalisis tiga skenario:
 
 ```mermaid
 graph TD
@@ -51,7 +51,7 @@ graph TD
 
 ## 2. Studi Kasus Analisis Tiga Skenario: Sequential (Linear) Search
 
-Diberikan array $A[1 \dots n]$ dan nilai target $x$:
+Diberikan array A[1 ... n] dan nilai target x:
 
 ```python
 def linear_search(A, n, x):
@@ -67,17 +67,17 @@ def linear_search(A, n, x):
 
 ![aa_w3_average_case_curve.png](../attachments/aa_w3_average_case_curve.png)
 
-1. **Best Case**: Target $x$ berada di indeks pertama ($A[0]$).
-   - Jumlah pengecekan: $1$ kali.
-   - Kompleksitas: **$\Theta(1)$**.
-2. **Worst Case**: Target $x$ berada di indeks terakhir atau tidak ada sama sekali dalam array.
-   - Jumlah pengecekan: $n$ kali.
-   - Kompleksitas: **$\Theta(n)$**.
+1. **Best Case**: Target x berada di indeks pertama (A[0]).
+   - Jumlah pengecekan: 1 kali.
+   - Kompleksitas: **Θ(1)**.
+2. **Worst Case**: Target x berada di indeks terakhir atau tidak ada sama sekali dalam array.
+   - Jumlah pengecekan: n kali.
+   - Kompleksitas: **Θ(n)**.
 3. **Average Case**:
-   - Asumsikan peluang target $x$ berada di sembarang indeks $i \in \{1, \dots, n\}$ adalah sama rata ($P(i) = \frac{1}{n}$).
+   - Asumsikan peluang target x berada di sembarang indeks i \in \{1, ..., n\} adalah sama rata (P(i) = \frac{1}{n}).
    - Ekspektasi jumlah perbandingan:
-     $$E[T(n)] = \sum_{i=1}^n i \cdot P(i) = \frac{1}{n} \sum_{i=1}^n i = \frac{1}{n} \cdot \frac{n(n+1)}{2} = \frac{n+1}{2}$$
-   - Secara asimtotik: $\frac{n+1}{2} = \Theta(n)$.
+     $E[T(n)] = ∑_{i=1}^n i · P(i) = \frac{1}{n} ∑_{i=1}^n i = \frac{1}{n} · \frac{n(n+1)}{2} = \frac{n+1}{2}$
+   - Secara asimtotik: \frac{n+1}{2} = Θ(n).
 
 ---
 
@@ -85,57 +85,57 @@ def linear_search(A, n, x):
 
 ![aa_w3_big_o_definition.png](../attachments/aa_w3_big_o_definition.png)
 
-### A. Notasi Big-O ($O$) — Batas Atas Asimtotik (Asymptotic Upper Bound)
+### A. Notasi Big-O (O) — Batas Atas Asimtotik (Asymptotic Upper Bound)
 > [!important] Definisi Formal Big-O
-> $f(n) = O(g(n))$ jika dan hanya jika terdapat konstanta positif $c > 0$ dan bilangan bulat $n_0 > 0$ sedemikian rupa sehingga:
-> $$0 \le f(n) \le c \cdot g(n), \quad \forall n \ge n_0$$
+> f(n) = O(g(n)) jika dan hanya jika terdapat konstanta positif c > 0 dan bilangan bulat n_0 > 0 sedemikian rupa sehingga:
+> $0 ≤ f(n) ≤ c · g(n),   untuk semua n ≥ n_0$
 
-Artinya, untuk nilai $n$ yang cukup besar ($n \ge n_0$), kurva fungsi $f(n)$ tidak akan pernah melampaui kurva $c \cdot g(n)$.
+Artinya, untuk nilai n yang cukup besar (n ≥ n_0), kurva fungsi f(n) tidak akan pernah melampaui kurva c · g(n).
 
 #### Contoh Pembuktian Formal Big-O:
-- **Soal 1: Buktikan $n^2 + 1 = O(n^2)$**
-  - Trik: Untuk setiap $n \ge 1$, berlaku $1 \le n^2$.
-  - Maka: $n^2 + 1 \le n^2 + n^2 = 2n^2$.
-  - Pilih konstanta **$c = 2$** dan **$n_0 = 1$**.
-  - Karena $n^2 + 1 \le 2n^2$ berlaku untuk semua $n \ge 1$, maka terbukti $n^2 + 1 = O(n^2)$.
-- **Soal 2: Buktikan $T(n) = 2n^2 + 6n + 1 = O(n^2)$**
-  - Untuk setiap $n \ge 1$, berlaku $n \le n^2$ dan $1 \le n^2$.
-  - Maka: $2n^2 + 6n + 1 \le 2n^2 + 6n^2 + 1n^2 = 9n^2$.
-  - Pilih konstanta **$c = 9$** dan **$n_0 = 1$**.
-  - Terbukti bahwa $2n^2 + 6n + 1 = O(n^2)$.
+- **Soal 1: Buktikan n² + 1 = O(n²)**
+  - Trik: Untuk setiap n ≥ 1, berlaku 1 ≤ n².
+  - Maka: n² + 1 ≤ n² + n² = 2n².
+  - Pilih konstanta **c = 2** dan **n_0 = 1**.
+  - Karena n² + 1 ≤ 2n² berlaku untuk semua n ≥ 1, maka terbukti n² + 1 = O(n²).
+- **Soal 2: Buktikan T(n) = 2n² + 6n + 1 = O(n²)**
+  - Untuk setiap n ≥ 1, berlaku n ≤ n² dan 1 ≤ n².
+  - Maka: 2n² + 6n + 1 ≤ 2n² + 6n² + 1n² = 9n².
+  - Pilih konstanta **c = 9** dan **n_0 = 1**.
+  - Terbukti bahwa 2n² + 6n + 1 = O(n²).
 
 ---
 
-### B. Notasi Big-Omega ($\Omega$) — Batas Bawah Asimtotik (Asymptotic Lower Bound)
+### B. Notasi Big-Omega (Ω) — Batas Bawah Asimtotik (Asymptotic Lower Bound)
 
 ![aa_w3_big_omega_definition.png](../attachments/aa_w3_big_omega_definition.png)
 
 > [!important] Definisi Formal Big-Omega
-> $f(n) = \Omega(g(n))$ jika dan hanya jika terdapat konstanta positif $c > 0$ dan $n_0 > 0$ sedemikian rupa sehingga:
-> $$0 \le c \cdot g(n) \le f(n), \quad \forall n \ge n_0$$
+> f(n) = Ω(g(n)) jika dan hanya jika terdapat konstanta positif c > 0 dan n_0 > 0 sedemikian rupa sehingga:
+> $0 ≤ c · g(n) ≤ f(n),   untuk semua n ≥ n_0$
 
-Artinya, kurva fungsi $f(n)$ berada di atas kurva $c \cdot g(n)$ untuk seluruh $n \ge n_0$.
-- *Contoh*: $3n^2 + 2 = \Omega(n^2)$.
-  - Untuk $n \ge 1$, $3n^2 + 2 \ge 3n^2 \ge 1 \cdot n^2$.
-  - Pilih $c = 1, n_0 = 1$. Terbukti.
+Artinya, kurva fungsi f(n) berada di atas kurva c · g(n) untuk seluruh n ≥ n_0.
+- *Contoh*: 3n² + 2 = Ω(n²).
+  - Untuk n ≥ 1, 3n² + 2 ≥ 3n² ≥ 1 · n².
+  - Pilih c = 1, n_0 = 1. Terbukti.
 
 ---
 
-### C. Notasi Big-Theta ($\Theta$) — Batas Ketat (Asymptotic Tight Bound)
+### C. Notasi Big-Theta (Θ) — Batas Ketat (Asymptotic Tight Bound)
 > [!important] Definisi Formal Big-Theta
-> $f(n) = \Theta(g(n))$ jika dan hanya jika $f(n) = O(g(n))$ dan $f(n) = \Omega(g(n))$.
-> Secara matematis: $\exists c_1 > 0, c_2 > 0, n_0 > 0$ sedemikian rupa sehingga:
-> $$0 \le c_1 \cdot g(n) \le f(n) \le c_2 \cdot g(n), \quad \forall n \ge n_0$$
+> f(n) = Θ(g(n)) jika dan hanya jika f(n) = O(g(n)) dan f(n) = Ω(g(n)).
+> Secara matematis: ada c_1 > 0, c_2 > 0, n_0 > 0 sedemikian rupa sehingga:
+> $0 ≤ c_1 · g(n) ≤ f(n) ≤ c_2 · g(n),   untuk semua n ≥ n_0$
 
 ---
 
-### D. Notasi Little-o ($o$) dan Little-omega ($\omega$)
-- **Little-o ($o$)**: Batas atas non-ketat (*strictly smaller*).
-  $$\lim_{n \to \infty} \frac{f(n)}{g(n)} = 0$$
-  *Contoh*: $2n = o(n^2)$, tetapi $2n^2 \ne o(n^2)$.
-- **Little-omega ($\omega$)**: Batas bawah non-ketat (*strictly larger*).
-  $$\lim_{n \to \infty} \frac{f(n)}{g(n)} = \infty$$
-  *Contoh*: $n^2 = \omega(n)$, tetapi $n^2 \ne \omega(2n^2)$.
+### D. Notasi Little-o (o) dan Little-omega (\omega)
+- **Little-o (o)**: Batas atas non-ketat (*strictly smaller*).
+  $\lim_{n → ∞} \frac{f(n)}{g(n)} = 0$
+  *Contoh*: 2n = o(n²), tetapi 2n² ≠ o(n²).
+- **Little-omega (\omega)**: Batas bawah non-ketat (*strictly larger*).
+  $\lim_{n → ∞} \frac{f(n)}{g(n)} = ∞$
+  *Contoh*: n² = \omega(n), tetapi n² ≠ \omega(2n²).
 
 ---
 
@@ -144,23 +144,23 @@ Artinya, kurva fungsi $f(n)$ berada di atas kurva $c \cdot g(n)$ untuk seluruh $
 ![aa_w3_sifat_big_o.png](../attachments/aa_w3_sifat_big_o.png)
 
 1. **Hukum Penjumlahan (*Sum Rule*)**:
-   $$O(f(n) + g(n)) = \max(O(f(n)), O(g(n)))$$
-   *Contoh*: $O(n^3 + 5n^2) = O(n^3)$.
+   $O(f(n) + g(n)) = \max(O(f(n)), O(g(n)))$
+   *Contoh*: O(n³ + 5n²) = O(n³).
 2. **Hukum Perkalian (*Product Rule*)**:
-   $$O(f(n) \cdot g(n)) = O(f(n)) \cdot O(g(n))$$
-   *Contoh*: $O(n \cdot \log n) = O(n) \cdot O(\log n)$.
+   $O(f(n) · g(n)) = O(f(n)) · O(g(n))$
+   *Contoh*: O(n · \log n) = O(n) · O(\log n).
 3. **Transitivitas**:
-   - Jika $f(n) = O(g(n))$ dan $g(n) = O(h(n))$, maka $f(n) = O(h(n))$.
-   - Berlaku juga untuk $\Omega, \Theta, o, \omega$.
+   - Jika f(n) = O(g(n)) dan g(n) = O(h(n)), maka f(n) = O(h(n)).
+   - Berlaku juga untuk Ω, Θ, o, \omega.
 4. **Refleksivitas**:
-   - $f(n) = O(f(n))$, $f(n) = \Omega(f(n))$, $f(n) = \Theta(f(n))$.
+   - f(n) = O(f(n)), f(n) = Ω(f(n)), f(n) = Θ(f(n)).
 5. **Simetri & Simetri Transpos**:
-   - $f(n) = \Theta(g(n)) \iff g(n) = \Theta(f(n))$.
-   - $f(n) = O(g(n)) \iff g(n) = \Omega(f(n))$.
+   - f(n) = Θ(g(n)) \iff g(n) = Θ(f(n)).
+   - f(n) = O(g(n)) \iff g(n) = Ω(f(n)).
 
 ---
 
-## 5. Latihan Slide: Menentukan Titik Potong Ambang $n_0$
+## 5. Latihan Slide: Menentukan Titik Potong Ambang n_0
 
 ![aa_w3_tabel_titik_potong_n0.png](../attachments/aa_w3_tabel_titik_potong_n0.png)
 
@@ -169,26 +169,26 @@ Artinya, kurva fungsi $f(n)$ berada di atas kurva $c \cdot g(n)$ untuk seluruh $
 ![aa_w3_latihan_mencari_n0.png](../attachments/aa_w3_latihan_mencari_n0.png)
 
 > [!example] Latihan Ujian Slide 26
-> Tentukan nilai ambang $n_0$ di mana satu algoritme mulai mengungguli algoritme lain ($f_a(n)$ vs $f_b(n)$).
+> Tentukan nilai ambang n_0 di mana satu algoritme mulai mengungguli algoritme lain (f_a(n) vs f_b(n)).
 
-### Soal A: $f_a(n) = n^2 + 90$ dan $f_b(n) = 16n + 42$
+### Soal A: f_a(n) = n² + 90 dan f_b(n) = 16n + 42
 Cari perpotongan dengan menyamakan kedua fungsi:
-$$n^2 + 90 = 16n + 42 \implies n^2 - 16n + 48 = 0$$
+$n² + 90 = 16n + 42 → n² - 16n + 48 = 0$
 Faktorkan persamaan kuadrat:
-$$(n - 4)(n - 12) = 0 \implies n = 4 \quad \text{atau} \quad n = 12$$
+$(n - 4)(n - 12) = 0 → n = 4   atau   n = 12$
 
-- Untuk $n < 4$: $f_a(n) > f_b(n)$
-- Untuk $4 < n < 12$: $f_a(n) < f_b(n)$ (Algoritme A lebih cepat)
-- Untuk $n > 12$: $f_a(n) > f_b(n)$ (Algoritme B jauh lebih cepat karena berordo linear $O(n)$)
-- **Maka $n_0 = 12$**. Setelah $n \ge 12$, fungsi $n^2 + 90$ selalu lebih lambat.
+- Untuk n < 4: f_a(n) > f_b(n)
+- Untuk 4 < n < 12: f_a(n) < f_b(n) (Algoritme A lebih cepat)
+- Untuk n > 12: f_a(n) > f_b(n) (Algoritme B jauh lebih cepat karena berordo linear O(n))
+- **Maka n_0 = 12**. Setelah n ≥ 12, fungsi n² + 90 selalu lebih lambat.
 
-### Soal B: $f_a(n) = 2n^2 + 20$ dan $f_b(n) = 11n + 6$
-$$2n^2 + 20 = 11n + 6 \implies 2n^2 - 11n + 14 = 0$$
-Hitung diskriminan $D$:
-$$D = (-11)^2 - 4(2)(14) = 121 - 112 = 9$$
-$$n = \frac{11 \pm \sqrt{9}}{2(2)} = \frac{11 \pm 3}{4} \implies n_1 = \frac{8}{4} = 2, \quad n_2 = \frac{14}{4} = 3{,}5$$
-- Untuk bilangan bulat $n \ge 4$: $f_a(n) > f_b(n)$.
-- **Maka $n_0 = 4$**.
+### Soal B: f_a(n) = 2n² + 20 dan f_b(n) = 11n + 6
+$2n² + 20 = 11n + 6 → 2n² - 11n + 14 = 0$
+Hitung diskriminan D:
+$D = (-11)^2 - 4(2)(14) = 121 - 112 = 9$
+$n = \frac{11 \pm \sqrt{9}}{2(2)} = \frac{11 \pm 3}{4} → n_1 = \frac{8}{4} = 2,   n_2 = \frac{14}{4} = 3{,}5$
+- Untuk bilangan bulat n ≥ 4: f_a(n) > f_b(n).
+- **Maka n_0 = 4**.
 
 ---
 
@@ -208,20 +208,20 @@ def bubble_sort(A, n):
             break
 ```
 
-1. **Best Case**: Array sudah terurut menaik ($[1, 2, 3, 4, 5]$).
-   - Pada iterasi luar pertama ($i = 0$), dilakukan $n-1$ perbandingan.
+1. **Best Case**: Array sudah terurut menaik ([1, 2, 3, 4, 5]).
+   - Pada iterasi luar pertama (i = 0), dilakukan n-1 perbandingan.
    - Variabel `swapped` tetap `False`, algoritme langsung berhenti (`break`).
-   - Waktu: $(n - 1) = \Theta(n)$.
-2. **Worst Case**: Array terurut terbalik ($[5, 4, 3, 2, 1]$).
+   - Waktu: (n - 1) = Θ(n).
+2. **Worst Case**: Array terurut terbalik ([5, 4, 3, 2, 1]).
    - Setiap elemen harus ditukar di setiap iterasi.
    - Jumlah perbandingan:
-     $$\sum_{i=0}^{n-2} (n - 1 - i) = (n - 1) + (n - 2) + \dots + 1 = \frac{n(n - 1)}{2} = \Theta(n^2)$$
-3. **Average Case**: Susunan array acak. Rata-rata perbandingan dan pertukaran tetap $\Theta(n^2)$.
+     $∑_{i=0}^{n-2} (n - 1 - i) = (n - 1) + (n - 2) + ... + 1 = \frac{n(n - 1)}{2} = Θ(n²)$
+3. **Average Case**: Susunan array acak. Rata-rata perbandingan dan pertukaran tetap Θ(n²).
 
 ---
 
 ## 🎯 Rangkuman Cepat untuk Ujian (ADHD Takeaways)
-- Big-O = Batas Atas ($\le c \cdot g(n)$).
-- Big-Omega = Batas Bawah ($\ge c \cdot g(n)$).
-- Big-Theta = Batas Ketat ($c_1 g(n) \le f(n) \le c_2 g(n)$).
-- Trik cari $c$ dan $n_0$ untuk polinom: Jadikan semua suku memiliki pangkat tertinggi pada $n \ge 1$, lalu jumlahkan koefisiennya untuk mendapatkan $c$.
+- Big-O = Batas Atas (≤ c · g(n)).
+- Big-Omega = Batas Bawah (≥ c · g(n)).
+- Big-Theta = Batas Ketat (c_1 g(n) ≤ f(n) ≤ c_2 g(n)).
+- Trik cari c dan n_0 untuk polinom: Jadikan semua suku memiliki pangkat tertinggi pada n ≥ 1, lalu jumlahkan koefisiennya untuk mendapatkan c.
